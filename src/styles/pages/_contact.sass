@@ -1,0 +1,42 @@
+.contact-detail
+	.logo
+		margin-bottom: 15px
+		img
+			width: 100px
+	.company
+		+fs(16rem)
+		font-weight: 500
+		text-transform: uppercase
+		margin-bottom: 20px
+	.contact-info
+		+fs(14rem)
+		li
+			+pos(rel,null)
+			padding-left: 25px
+			margin-bottom: 10px
+			.fa
+				+pos(abs,3px null null 0)
+				color: $color-default
+
+.contact-page
+	margin: 40px 0
+	background: $white
+	padding: 40px
+	.maps
+		margin: -20px -20px 40px
+	.contact-form
+		.module-title
+			+fs(14rem)
+			// font-weight: 500
+			// text-align: center
+			margin-bottom: 10px
+		.form-wrap
+			max-width: 700px
+			margin: 0 auto
+	.btn-wrap
+		// text-align: center
+		input[type="submit"]
+			width: auto
+			background: $color-primary
+			color: $white
+			+fs(14rem)

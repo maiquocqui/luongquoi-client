@@ -1,0 +1,91 @@
+// footer.footer1
+// 	// background-color: $white
+// 	background: $white url(../img/footer-bg.jpg) bottom left no-repeat
+// 	background-size: 400px
+// 	.footer-wrap
+// 		padding: 60px 0
+// 		.footer-about
+// 			.company
+// 				+fs(16rem)
+// 				font-weight: 500
+// 				text-transform: uppercase
+// 				margin-bottom: 20px
+// 			.contact-info
+// 				+fs(14rem)
+// 				li
+// 					+pos(rel,null)
+// 					padding-left: 25px
+// 					margin-bottom: 10px
+// 					.fa
+// 						+pos(abs,3px null null 0)
+// 						color: $color-default
+// 		.footer-col
+// 			.footer-title
+// 				+fs(16rem)
+// 				font-weight: 500
+// 				margin-bottom: 20px
+// 			.footer-link
+// 				li
+// 					margin-bottom: 10px
+// 				a
+// 					+fs(14rem)
+// 					&:hover
+// 						color: $color-default
+// 	.footer-bottom
+// 		background: $color-primary
+// 		text-align: center
+// 		color: $white
+// 		padding: 15px 0
+// 		+fs(13rem)
+
+footer
+	background: #10181e
+	.footer-wrap
+		padding: 60px 0
+		+media-breakpoint-down(sm)
+			padding-bottom: 0
+		.footer-about
+			+media-breakpoint-down(md)
+				margin-bottom: 40px
+			.company
+				+fs(16rem)
+				font-weight: 500
+				text-transform: uppercase
+				margin-bottom: 30px
+				color: $white
+			.contact-info
+				+fs(13rem)
+				color: $white
+				font-weight: 300
+				li
+					+pos(rel,null)
+					padding-left: 25px
+					margin-bottom: 10px
+					.fa
+						+pos(abs,3px null null 0)
+						color: $color-default
+		.footer-col
+			+media-breakpoint-down(sm)
+				text-align: center
+				margin-bottom: 40px
+			.footer-title
+				+fs(16rem)
+				color: $white
+				font-weight: 500
+				margin-bottom: 20px
+			.footer-link
+				li
+					margin-bottom: 10px
+				a
+					+fs(14rem)
+					font-weight: 300
+					color: $white
+					&:hover
+						color: $color-default
+	.footer-bottom
+		border-top: 1px solid color-rgba($white,0.1)
+		// background: $color-primary
+		text-align: center
+		color: $white
+		padding: 20px 0
+		+fs(13rem)

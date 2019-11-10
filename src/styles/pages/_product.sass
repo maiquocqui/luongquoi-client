@@ -1,0 +1,80 @@
+.product-page
+	padding: 40px 0
+	.product-list
+		.product
+			display: block
+			background: $white
+			+bor-rad(5px)
+			overflow: hidden
+			margin-bottom: 30px
+			border: 1px solid color-rgba($black,0.05)
+			box-shadow: 0px 5px 15px color-rgba($black,0.05)
+			&:hover
+				box-shadow: 0px 5px 15px color-rgba($color-default, 0.3)
+			.caption
+				padding: 15px 20px
+				.name
+					color: $color-primary
+					font-weight: 700
+
+.product-banner
+	img
+		width: 100%
+
+.product-section
+	padding: 60px 0
+	+pos(rel,null)
+	.bg
+		+pos(abs, null 0 0 0)
+		z-index: -1
+	.product-title
+		text-transform: uppercase
+		color: $color-default 
+		line-height: 1.2
+		padding-left: 30px
+		margin-bottom: 40px
+		+pos(rel,null)
+		&:before
+			content: ''
+			display: block
+			+pos(abs, 0 null 0 0)
+			width: 5px
+			background: linear-gradient(to bottom, $color-default, $color-primary)
+		h1
+			+fs(48rem)
+			font-weight: 900
+			margin-bottom: 8px
+			color: $color-primary
+		h2
+			+fs(28rem)
+			font-weight: 500
+			// letter-spacing: 5px
+			margin-bottom: 6px
+			color: #214e6f
+
+.product-section1
+	padding-bottom: 130px
+	.content
+		margin-bottom: 120px
+.product-wrap
+	.product-quote
+		+flexbox
+		flex-wrap: wrap
+		margin-bottom: 30px
+		.img
+			width: 250px
+			+media-breakpoint-down(sm)
+				width: 100%
+			img
+				width: 100%
+		.content
+			width: calc(100% - 250px)
+			padding-left: 30px
+			+media-breakpoint-down(sm)
+				width: 100%
+				padding-left: 0
+				padding-top: 30px
+
+.cert-slide
+	.logo
+		text-align: center

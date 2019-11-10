@@ -1,0 +1,69 @@
+.breadcrumb-wrap
+	+pos(rel,null)
+	.breadcrumb-bg
+		height: 300px
+		filter: brightness(70%)
+		+media-breakpoint-down(lg)
+			height: 250px
+	.breadcrumb
+		+pos(abs,50px null null null)
+		z-index: 1
+		margin: 0
+		padding: 5px 0
+		+bor-rad(0)
+		background: none
+		// border-bottom: 1px solid $white
+		+fs(14rem)
+		color: $white
+		text-shadow: 0px 5px 10px color-rgba($black,0.1)
+		+media-breakpoint-down(lg)
+			+fs(12rem)
+		li
+			+ li
+				&:before
+					content: '\e876'
+					font-family: Linearicons-Free
+					+fs(10rem)
+					padding: 0px 6px
+			a
+				color: $white
+	.page-name
+		+pos(abs,100px null null null)
+		+fs(48rem)
+		font-weight: 700
+		color: $white
+		text-shadow: 0px 5px 10px color-rgba($black,0.1)
+		+media-breakpoint-down(lg)
+			+fs(32rem)
+
+.breadcrumb-wrap2
+	background: $white
+	+pos(rel,null)
+	.breadcrumb-flex
+		+flexbox
+		align-items: center
+		align-content: center
+		justify-content: space-between
+		padding: 8px 0
+	.page-name
+		+fs(18rem)
+		font-weight: 500
+	.breadcrumb
+		z-index: 1
+		margin: 0
+		padding: 5px 0
+		+bor-rad(0)
+		background: none
+		border-bottom: 1px solid $white
+		+fs(14rem)
+		color: darken($white,40%)
+		li
+			+ li
+				&:before
+					content: '\e876'
+					font-family: Linearicons-Free
+					+fs(10rem)
+					padding: 0px 8px
+			&:last-child
+				a
+					color: $main

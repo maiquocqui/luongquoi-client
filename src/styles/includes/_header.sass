@@ -1,0 +1,177 @@
+header
+	+pos(fix, 0 0 null 0)
+	z-index: 500
+	background: $color-primary
+	+transition(all,0.5s)
+	.header-wrap
+		+flexbox
+		align-items: center
+		align-content: center
+		justify-content: space-between
+	.btn-showmenu
+		display: none
+		color: $white
+		+fs(24rem)
+		+pos(rel,null)
+		z-index: 1000
+		+transition(all,0.5s)
+		+media-breakpoint-down(lg)
+			display: block
+		&.invert
+			color: $main
+	.overlay
+		display: none
+		+pos(fix, 0 null 0 0)
+		right: 0
+		z-index: 500
+		background: color-rgba($black,0.8)
+		+media-breakpoint-down(lg)
+	.logo
+		height: 70px
+		+flexbox
+		align-items: center
+		align-content: center
+		+media-breakpoint-down(lg)
+			height: 50px
+		a
+			display: block
+			img
+				height: 50px
+				+media-breakpoint-down(lg)
+					height: 40px
+	.menu
+		+media-breakpoint-down(lg)
+			+pos(abs, 0 null 0 0)
+			z-index: 999
+			width: 280px
+			background: $white
+			padding-top: 50px
+			+transition(all,0.5s)
+			+transform(translateX(-100%))
+			&.open
+				+transform(translateX(0))
+	ul.menu-link
+		+flexbox
+		align-items: center
+		align-content: center
+		+fs(15rem)
+		font-weight: 300
+		+media-breakpoint-down(lg)
+			flex-direction: column
+			align-items: stretch
+			align-content: stretch
+		> li
+			+pos(rel,null)
+			padding: 10px 0
+			+media-breakpoint-down(lg)
+				padding: 0
+			+ li
+				margin-left: 40px
+				+media-breakpoint-down(lg)
+					margin-left: 0
+			> a
+				display: block
+				color: $white
+				padding: 5px 0
+				border-bottom: 1px solid transparent
+				// font-weight: 300
+				// text-transform: uppercase
+				+media-breakpoint-down(lg)
+					color: $main
+					padding: 10px 20px
+			.sub-menu
+				+pos(abs, 50px null null 50%)
+				+transform(translateX(-50%))
+				min-width: 200px
+				background: $white
+				padding: 15px 20px
+				+bor-rad(3px)
+				z-index: 3
+				+fs(14rem)
+				box-shadow: 0 1px 10px color-rgba($black,0.1)
+				visibility: hidden
+				opacity: 0
+				display: none
+				ul
+					li
+						margin-bottom: 8px
+						&:last-child
+							margin-bottom: 0px
+						a
+						&:hover
+							a
+								color: $color-default
+			&:hover
+				a
+					// border-bottom: 1px solid $white
+				.sub-menu
+					display: block
+					visibility: visible
+					opacity: 1
+	.header-right
+		+flexbox
+		align-items: center
+		align-content: center
+		.search
+			.search-toggle
+				color: $white
+				+fs(24rem)
+				line-height: 1
+				cursor: pointer
+				+media-breakpoint-down(lg)
+					+fs(18rem)
+			.dropdown-menu
+				border: none
+				padding: 0
+				+bor-rad(5px)
+				overflow: hidden
+				background: color-rgba($black,0.9)
+			.searchbox
+				+fs(14rem)
+				input
+					background: none
+					border: none
+					padding: 8px 15px
+					color: $white
+				.searchbutton
+					+pos(abs, 7px 15px null null)
+					z-index: 5
+					color: $white
+					background: none
+					border: none
+					padding: 0
+					+fs(0)
+					&:before 
+						content: '\f002'
+						+fs(14rem)
+		.language
+			margin-left: 20px
+			.language-toggle
+				color: $white
+				+fs(24rem)
+				line-height: 1
+				cursor: pointer
+				+media-breakpoint-down(lg)
+					+fs(18rem)
+			.dropdown-menu
+				+fs(13rem)
+				border: none
+				background: color-rgba($black,0.9)
+				.dropdown-item
+					color: $white
+					&:hover
+						background: unset
+						color: $color-default
+					&.active
+						background: $color-default
+.fullpage
+	padding-top: 70px
+.homepage
+	.fullpage
+		padding-top: 0
+	header
+		+pos(fix,0 0 null 0)
+		z-index: 500
+		background: transparent
+		&.active
+			background: $color-primary

@@ -1,0 +1,43 @@
+.news-detail
+	margin: 40px 0
+	h1.news-name
+		+fs(24rem)
+		line-height: 1.3
+		font-weight: 700
+		color: $color-primary
+		margin-bottom: 5px
+	.news-info
+		border-bottom: 1px solid darken($white,10%)
+		padding-bottom: 15px
+		margin-bottom: 15px
+		time
+			+fs(13rem)
+			color: darken($white,60%)
+			&:before
+				content: '\f017'
+				margin-right: 5px
+.small-title
+	@extend .sidebar-title
+.news-others
+	margin: 40px 0
+	li
+		line-height: 1.3
+		margin-bottom: 10px
+		padding-bottom: 10px
+		border-bottom: 1px dashed darken($white,10%)
+		padding-left: 20px
+		+pos(rel,null)
+		&:before
+			content: ''
+			display: block
+			width: 8px
+			height: 8px
+			+bor-rad(3px)
+			background: $color-default
+			+pos(abs, 6px null null 0)
+	a
+		+fs(13rem)
+		color: darken($white,60%)
+		font-weight: 500
+		&:hover
+			color: $color-default

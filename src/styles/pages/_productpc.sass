@@ -1,0 +1,62 @@
+.product-overview
+	.btn-changeoption
+		display: inline-block
+		+bor-rad(5px)
+		+fs(13rem)
+		padding: 5px 8px
+		background: darken($white,10%)
+		margin-bottom: 10px
+		font-weight: 500
+		&:hover
+			background: $blue
+			color: $white
+.pc-detail-table
+	border: 1px solid darken($white,10%)
+	+bor-rad(5px)
+	margin-bottom: 10px
+	td
+		padding: 7px 10px
+		border-bottom: 1px solid darken($white,10%)
+		+fs(13rem)
+		+ td
+			border-left: 1px solid darken($white,10%)
+		a
+			&:hover
+				color: $blue
+	tr
+		&:last-child
+			td
+				border-bottom: none
+
+.product-hardwarechange
+	background: $white
+	padding: 15px
+	+bor-rad(5px)
+	margin: 0 0 15px
+	+pos(rel,null)
+	+media-breakpoint-down(md)
+		margin: 0px -15px 10px
+		box-shadow: none
+		+bor-rad(0)
+	.cart-total
+		// +flexbox
+		// flex-direction: column
+		// align-items: flex-end
+		// align-content: flex-end
+		.group
+			+flexbox
+			align-items: center
+			align-content: center
+			justify-content: space-between
+			// width: 100%
+			// max-width: 250px
+			.label
+				+fs(13rem)
+			.value
+				+fs(15rem)
+				font-weight: 700
+				color: $bluegrey
+			&.total
+				.value
+					+fs(18rem)
+					color: $red

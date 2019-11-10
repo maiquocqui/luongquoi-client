@@ -1,0 +1,277 @@
+
+.home-banner
+	.banner-slide
+		img
+			width: 100%
+
+.home-title
+	+fs(28rem)
+	font-weight: 500
+	color: $color-default
+	text-transform: uppercase
+	margin-bottom: 20px
+.home-section
+	padding: 60px 0
+
+.home-intro
+	.about
+		+fs(14rem)
+		margin-bottom: 20px
+	.viewmore
+		color: $color-default
+		+fs(14rem)
+		font-weight: 500
+
+.home-param
+	background:url(../img/bg1.jpg) center center no-repeat
+	background-size: cover
+	padding: 80px 0
+	color: $white
+	.param-list
+	.param-item
+		+flexbox
+		flex-direction: column
+		align-items: center
+		align-content: center
+		.number
+			+flexbox
+			align-items: center
+			align-content: center
+			justify-content: center
+			width: 140px
+			height: 140px
+			+bor-rad(1000px)
+			background: color-rgba($white,0.3)
+			+fs(24rem)
+			+pos(rel,nul)
+			margin-bottom: 15px
+			&:before 
+				content: ''
+				display: block
+				+bor-rad(100px)
+				border: 3px solid $white
+				+pos(abs, 10px 10px null 10px)
+				bottom: 10px
+		.title
+			+fs(18rem)
+			font-weight: 500
+			text-transform: uppercase
+			+pos(rel,null)
+			margin-bottom: 10px
+			&:before
+				content: ''
+				display: block
+				width: 100px
+				height: 1px
+				background: $white
+				+pos(abs, 110% null null 50%)
+				+transform(translateX(-50%))
+		.des
+			+fs(14rem)
+
+.home-product
+	background: $color-primary
+	+pos(rel,null)
+	&:before
+		content: ''
+		display: block
+		background: $white
+		+pos(abs, 0 50% 0 0)
+	.home-title
+		color: $white
+		margin-left: 60px
+	.product
+		background: $white
+		padding-right: 60px
+		.des
+			+fs(14rem)
+		.viewmore
+			display: inline-block
+			margin-top: 20px
+			+fs(13rem)
+			font-weight: 500
+			padding: 8px 30px
+			color: $color-default
+			+bor-rad(100px)
+			border: 1px solid $color-default
+			&:hover
+				background: $color-default
+				color: $white
+	.product-type
+		.nav
+			border: none
+			background: none
+			margin: 0
+			padding: 0
+			display: flex
+			flex-direction: column
+			.nav-item
+				border: none
+				background: none
+				margin: 0
+				padding: 0
+				margin-bottom: 20px
+				.nav-link
+					border: none
+					background: none
+					margin: 0
+					padding: 0
+					+bor-rad(0 100px 100px 0)
+					.product-item
+						display: flex
+						align-items: center
+						align-content: center
+						padding: 10px 0px 10px 60px
+						img
+							width: 64px
+							filter: invert(100%)
+						.name
+							+fs(18rem)
+							font-weight: 500
+							text-transform: uppercase
+							padding-left: 20px
+							color: $white
+					&.active
+						background: $white
+						.product-item
+							img
+								filter: invert(0%)
+							.name
+								color: $main
+
+.home-contact
+	background: url(../img/bg2.jpg) center center no-repeat
+	background-size: cover
+	color: $white
+	padding: 40px 0
+	.home-title
+		color: $white
+		margin-bottom: 20px
+	.contact-buy
+		max-width: 500px
+		+bor-rad(30px)
+		background: color-rgba($black,0.1)
+		padding: 30px 40px
+		text-align: center
+		.des
+			+fs(14rem)
+			margin-bottom: 25px
+		.btn-wrap
+			display: flex
+			justify-content: space-between
+			.btn-buy
+				background: color-rgba($white,0.3)
+				display: block
+				padding: 10px 30px
+				+bor-rad(100px)
+				+fs(14rem)
+				font-weight: 500
+				text-transform: uppercase
+				&:hover
+					color: $red
+					background: $white
+
+.home-active
+	background: $black
+	.home-title
+		color: $white
+	.active
+		+pos(rel,null)
+		&:hover
+			.info
+				opacity: 1
+		.img
+			img
+				width: 100%
+				height: 300px
+				object-fit: cover
+		.info
+			+fs(14rem)
+			color: $white
+			+pos(abs, 0 null 0 0)
+			right: 0
+			z-index: 3
+			background: color-rgba($black,0.8)
+			padding: 40px
+			display: flex
+			flex-direction: column
+			justify-content: flex-end
+			align-items: flex-start
+			align-content: flex-start
+			opacity: 0
+			+textover(2)
+			+transition(all,0.3s)
+			.name
+				font-weight: 500
+				margin-bottom: 15px
+			.des
+				+fs(12rem)
+				+textover(4)
+				margin-bottom: 15px
+			.viewmore
+				display: inline-block
+				+fs(13rem)
+				line-height: 1.5
+				+textover(1)
+				font-weight: 500
+				padding: 5px 15px
+				+bor-rad(100px)
+				color: $color-default
+				border: 1px solid $color-default
+				&:hover
+					background: $color-default
+					color: $white
+
+.home-news
+	background: url(../img/bg4.jpg) center center repeat
+	background-size: 800px
+	.news-item
+		background: color-rgba($black,0.3)
+		height: 100%
+		.img
+			img
+				width: 100%
+				height: 250px
+				object-fit: cover
+		.info
+			padding: 10px 15px
+			.name
+				+fs(14rem)
+				font-weight: 500
+				text-transform: uppercase
+
+.home-recrui
+	padding: 80px 0
+	background: url(../img/bg3.jpg) center center no-repeat
+	background-size: cover
+	+pos(rel,null)
+	&:before
+		content: ''
+		+pos(abs, 0 null 0 0)
+		right: 0
+		background: color-rgba($black,0.5)
+		z-index: 1
+	.home-title
+		color: $white
+		margin-bottom: 20px
+	.home-title,.container
+		+pos(rel,null)
+		z-index: 3
+	.recrui-intro
+		max-width: 700px
+		margin: 0 auto
+		color: $white
+		+fs(14rem)
+		margin-bottom: 40px
+	.btn-apply
+		+fs(15rem)
+		font-weight: 500
+		padding: 10px 30px
+		+bor-rad(1000px)
+		// border: 1px solid $color-default
+		color: $white
+		text-transform: uppercase
+		background: color-rgba($white,0.5)
+		&:hover
+			background: $white
+			color: $red
