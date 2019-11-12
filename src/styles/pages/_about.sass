@@ -23,7 +23,6 @@
 		img
 			max-width: 120%
 	.intro
-		text-align: right
 		.title
 			text-transform: uppercase
 			color: $color-default 
@@ -54,6 +53,27 @@
 				letter-spacing: 2.35px
 		.content
 			margin-bottom: 30px
+			text-align: justify
+		.title2
+			padding: 10px 0
+			margin-bottom: 15px
+			border-bottom: 2px solid darken($white,20%)
+		.ic-tn
+			background: $color-primary
+			width: 64px
+			height: 64px
+			+flexbox
+			align-items: center
+			justify-content: center
+			+bor-rad(10px)
+			margin-top: 15px
+			box-shadow: 5px 5px 0 color-rgba($color-dark,0.1)
+			img
+				filter: invert(100%)
+				margin: 0
+				padding: 0
+				max-width: 60%
+				max-height: 60%
 
 .about-title, .page-title
 	+fs(28rem)
@@ -77,6 +97,37 @@
 
 .about-section9
 	background: darken($white,3%)
+.gt-list
+	margin-top: 60px
+	.gt-col
+		text-align: center
+		// margin-bottom: 40px
+		.icon
+			background: $color-primary
+			+flexbox
+			align-items: center
+			align-content: center
+			justify-content: center
+			width: 160px
+			height: 160px
+			margin: 0 auto 40px
+			+bor-rad(10px)
+			+transform(rotateZ(45deg))
+			img
+				max-width: 50%
+				max-height: 50%
+				filter: invert(100%)
+				+transform(rotateZ(-45deg))
+		.name
+			+fs(16rem)
+			font-weight: 700
+			color: $color-primary
+			text-transform: uppercase
+		.des
+			+fs(13rem)
+			color: darken($white,60%)
+			max-width: 60%
+			margin: 0 auto
 .about-section3
 	// background: url(../img/bg4.jpg) repeat
 	// background-size: 800px
@@ -85,7 +136,7 @@
 .history-wrap
 	+pos(rel,null)
 	.history-line
-		background: $color-default
+		background: darken($color-default,20%)
 		&.line1
 			+pos(abs, 30px 100px null 100px)
 			height: 30px
@@ -94,7 +145,7 @@
 				+pos(abs, 0 100% null null)
 				width: 300px
 				height: 30px
-				background: linear-gradient(to right, color-rgba($color-default,0),color-rgba($color-default,1))
+				background: linear-gradient(to right, color-rgba(darken($color-default,20%),0),color-rgba(darken($color-default,20%),1))
 		&.line2
 			+pos(abs, 30px 100px null null)
 			width: 30px
@@ -114,71 +165,71 @@
 				+pos(abs, 0 null null 100%)
 				width: 300px
 				height: 30px
-				background: linear-gradient(to left, color-rgba($color-default,0),color-rgba($color-default,1))
+				background: linear-gradient(to left, color-rgba(darken($color-default,20%),0),color-rgba(darken($color-default,20%),1))
 	.history-timeline
 		+pos(rel,null)
 		z-index: 5
 	.history-grid
 		+flexbox
 		flex-wrap: wrap
-		&:nth-child(2)
-			margin-top: -200px
-			margin-bottom: 30px
-		&:nth-child(3)
-			// margin-bottom: 30px
 		.history-block
-			// +flexbox
-			// align-items: center
-			width: calc((100% - 60px) / 8 * 3)
+			width: calc((100% - 60px) / 100 * 33.33)
 			height: 200px
-			padding: 30px 20px 0
+			padding: 20px
 			+bor-rad(10px)
-			background: color-rgba($color-primary,0.8)
+			background: color-rgba($color-primary,1)
 			color: $white
-			&.block2
+			margin-bottom: 30px
+			// +flexbox
+			&:nth-child(3n+2)
 				margin-left: 30px
-			&.block3
-				margin-left: 30px
-				width: calc((100% - 60px) / 8 * 2)
-				height: 430px
-				flex-direction: column
-				text-align: center
-			&.block4
-				order: 2
-				margin-left: 30px
-			&.block5
+				margin-right: 30px
+			&:nth-child(1)
 				order: 1
-			&.block6
-				width: calc((100% - 60px) / 8 * 2)
-				flex-direction: column
-			&.block7
-				margin-left: 30px
-			&.block8
-				margin-left: 30px
-			&.block9
-				width: calc((100% - 60px) / 9 * 3)
-			&.block10
-				margin-left: 30px
-				width: calc((100% - 60px) / 9 * 3)
-			&.block11
-				margin-left: 30px
-				width: calc((100% - 60px) / 9 * 3)
-				background: color-rgba($color-default,0.8)
-			.row
-				margin: 0px -5px
-				.col-12
-					padding: 0px 5px
+			&:nth-child(2)
+				order: 2
+			&:nth-child(3)
+				order: 3
+			&:nth-child(4)
+				order: 6
+			&:nth-child(5)
+				order: 5
+			&:nth-child(6)
+				order: 4
+			&:nth-child(7)
+				order: 7
+			&:nth-child(8)
+				order: 8
+			&:nth-child(9)
+				order: 9
+			&:last-child
+				background: $color-default
+			.content-wrap
+				+flexbox
+				align-items: center
+				align-content: center
+				height: calc(100% - 30px)
 			.year
 				+fs(28rem)
 				line-height: 1
 				font-weight: 900
-				margin-bottom: 10px
+				height: 30px
 			.content
+				width: calc(100% - 120px)
+				padding-right: 10px
+				text-align: justify
 				+fs(13rem)
+				p
+					margin-bottom: 0
 				// font-weight: 300
 			.img
+				width: 120px
 				img
+					width: 120px
+					height: 100px
+					object-fit: cover
 					+bor-rad(5px)
+
 
 .about-section4
 	background: darken($white,3%)
@@ -320,6 +371,7 @@
 					+bor-rad(0)
 			.caption
 				padding: 15px 20px
+				min-height: 147px
 				+fs(13rem)
 				.name
 					+fs(14rem)
@@ -327,7 +379,7 @@
 					min-height: 36px
 					font-weight: 700
 					margin-bottom: 5px
-				.phone, .location
+				.phone, .location, .email
 					+pos(rel,null)
 					padding-left: 20px
 					&:before
@@ -340,7 +392,11 @@
 				.phone
 					&:before
 						content: '\f095'
+				.email
+					&:before
+						content: '\f0e0'
 .about-section10
+	background: url(../img/vnlbg.png) center bottom repeat-x
 	.vnl-intro
 		background: $color-primary
 		color: $white
@@ -353,4 +409,55 @@
 		color: $color-primary
 .about-section11, .about-section13, .about-section15
 	background: darken($white,3%)
-	
+
+.about-section12
+	.quote-wrap
+		background: darken($white,5%)
+		padding: 20px
+	.quote
+		background: none
+	.bg-primary
+		background: $color-primary !important
+		padding: 20px
+		color: $white
+		font-weight: 300
+	.tn-img
+		height: 100%
+		max-height: 100%
+		+pos(rel,null)
+		img
+			display: block
+			object-fit: cover
+			+pos(abs, 0 null 0 0)
+			right: 0
+			height: 100%
+
+.difference-intro
+	background: darken($white,5%)
+	.content
+		padding: 30px
+		text-align: justify
+		p
+			&:last-child
+				margin-bottom: 0
+	.img
+		+bor-rad(0)
+		img
+			+bor-rad(0)
+
+.nlhk
+	img
+		+bor-rad(10px)
+
+.about-section16
+	.cert-slide
+		background: darken($white,3%)
+		padding: 10px
+		.item
+			padding: 10px
+			img
+				margin: 0
+				border: 3px solid transparent
+			&:hover
+				img
+					border-color: $color-primary
