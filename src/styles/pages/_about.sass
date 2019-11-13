@@ -177,7 +177,7 @@
 			height: 200px
 			padding: 20px
 			+bor-rad(10px)
-			background: color-rgba($color-primary,1)
+			background: color-rgba($color-primary,0.97)
 			color: $white
 			margin-bottom: 30px
 			// +flexbox
@@ -203,7 +203,7 @@
 			&:nth-child(9)
 				order: 9
 			&:last-child
-				background: $color-default
+				background: color-rgba($color-default,0.95)
 			.content-wrap
 				+flexbox
 				align-items: center
@@ -418,19 +418,18 @@
 		background: none
 	.bg-primary
 		background: $color-primary !important
-		padding: 20px
+		padding: 40px 60px
 		color: $white
 		font-weight: 300
-	.tn-img
 		height: 100%
-		max-height: 100%
+		+flexbox
+		flex-direction: column
+		justify-content: center
+	.tn-img
 		+pos(rel,null)
 		img
-			display: block
-			object-fit: cover
-			+pos(abs, 0 null 0 0)
-			right: 0
-			height: 100%
+			width: 100%
+			margin: 0
 
 .difference-intro
 	background: darken($white,5%)
