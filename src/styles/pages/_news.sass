@@ -1,7 +1,9 @@
 .page-title
 	+fs(28rem)
 	font-weight: 500
-
+.page-title2
+	@extend .title
+	+fs(36rem)
 .hot-news
 	margin-top: 50px
 	margin-bottom: 30px
@@ -58,18 +60,21 @@
 .news-list
 	margin-top: 40px
 	.news-item
-		background: darken($white,5%)
 		margin-bottom: 30px
-		+bor-rad(5px)
-		overflow: hidden
 		+transition(all,0.3s)
-		&:hover
-			box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.04), -10px 0 20px 0px rgba(0,0,0,0.04);
-			figure
-				.news-img
-					img
-						+transform(scale3d(1.1,1.1,1))
 		figure
+			+pos(rel,null)
+			time
+				display: block
+				+pos(abs,0 null null 50%)
+				+transform(translateX(-50%))
+				background: $color-default
+				color: $white
+				padding: 8px 20px
+				+bor-rad(0px 0px 10px 10px)
+			&:hover
+				figcaption
+					box-shadow: 0px 10px 20px color-rgba($black,0.1)
 			.news-img
 				overflow: hidden
 				img
@@ -78,7 +83,14 @@
 					object-fit: cover
 					+transition(all,0.3s)
 			figcaption
+				z-index: 3
+				background: $white
+				+bor-rad(5px)
+				margin: -20px 20px 0
 				padding: 30px
+				+pos(rel,null)
+				z-index: 3
+				+transition(all,0.5s)
 				.news-cate
 					color: $color-default
 					text-transform: uppercase
@@ -88,21 +100,16 @@
 				.news-name
 					color: $main
 					+fs(18rem)
-					line-height: 1.2
+					line-height: 1.5
 					font-weight: 500
 					margin-bottom: 10px
 					min-height: 42px
 					+textover(2)
-				time
-					display: block
-					+fs(12rem)
-					color: darken($white,40%)
-					letter-spacing: 1px
-					margin-bottom: 10px
 				.news-des
 					+fs(14rem)
+					line-height: 1.8
 					color: darken($white,60%)
-					+textover(2)
+					+textover(3)
 	
 	// .col-lg-6
 	// 	.news-item
@@ -127,23 +134,31 @@
 			margin-left: 3px
 
 .hot-news2
-	margin: 40px -100px 40px
+	margin: 40px 0 40px
+	.row
+		margin: 0px -5px
+		.col-12
+			padding: 0px 5px
 	.news-item
 		+pos(rel,null)
-		+bor-rad(10px)
+		+bor-rad(5px)
 		overflow: hidden
-		&:before
-			content: ''
-			+pos(abs, 0 null 0 0)
-			right: 0
-			z-index: 1
-			background: linear-gradient(color-rgba($black,0),color-rgba($black,0.5))
+		// &:before
+		// 	content: ''
+		// 	+pos(abs, 0 null 0 0)
+		// 	right: 0
+		// 	z-index: 1
+		// 	background: linear-gradient(color-rgba($black,0),color-rgba($black,0.5))
 		&.big
 			figure
+				.news-img
+					img
+						height: 500px
 				figcaption
-					padding: 40px
+					padding: 60px
 					.news-name
-						+fs(28rem)
+						+fs(36rem)
+						+textover(2)
 						margin: 10px 0 15px
 			&:hover
 				figure
@@ -152,16 +167,23 @@
 						.btn-link
 							opacity: 1
 							margin-bottom: 0
+		&:nth-child(2)
+			margin-top: 10px
+			figure
+				.news-img
+					img
+						height: 200px
 		figure
 			.news-img
 				img
 					width: 100%
-					height: 430px
+					height: 290px
 					object-fit: cover
 			figcaption
 				+pos(abs, null 0 0 0)
 				z-index: 2
-				padding: 20px
+				padding: 40px
+				background: linear-gradient(color-rgba($black,0),color-rgba($black,0.8))
 				+transition(all,0.3s)
 				.news-cate
 					display: inline-block
@@ -178,14 +200,16 @@
 					display: inline-block
 					vertical-align: middle
 					color: $white
-					+fs(11rem)
+					+fs(13rem)
+					font-weight: 500
 					&:before
 						content: '\e864'
 						font-family: Linearicons-Free
 						margin-right: 3px
 				.news-name
-					+fs(18rem)
-					line-height: 1.3
+					@extend .title
+					+fs(32rem)
+					// line-height: 1.3
 					+textover(2)
 					font-weight: 700
 					color: $white
@@ -194,6 +218,7 @@
 					+fs(13rem)
 					+textover(2)
 					color: $white
+					display: none
 				.btn-link
 					+fs(12rem)
 					font-weight: 500
@@ -213,13 +238,13 @@
 
 .news-page2
 .news-group
-	margin-bottom: 40px
+	margin-bottom: 20px
 .news-cate-wrap
 	+flexbox
 	justify-content: space-between
 	align-items: center
 	align-content: center
-	margin-bottom: 40px
+	margin-bottom: 20px
 	.news-cate-name
 		background: $main
 		color: $white
@@ -239,46 +264,62 @@
 			color: $color-default
 .news-list2
 	.news-item
-		margin-bottom: 40px
+		margin-bottom: 30px
+		+transition(all,0.5s)
+		.row
+			margin: 0px -5px
+			[class^="col-"]
+				padding: 0px 5px
+		&.big
+			.row
+				margin: 0px -15px
+				[class^="col-"]
+					padding: 0px 15px
+			figure
+				.news-img
+					img
+						height: 220px
+				figcaption
+					.news-name
+						+fs(20rem)
 		figure
 			+flexbox
 			align-items: center
 			align-content: center
 			.news-img
-				width: 250px
-				+bor-rad(5px)
-				overflow: hidden
+				display: block
 				img
 					width: 100%
-					height: 180px
+					height: 90px
 					object-fit: cover
+					+bor-rad(5px)
 			figcaption
-				flex: 1
-				padding-left: 20px
 				.news-name
-					+fs(20rem)
-					line-height: 1.3
-					font-weight: 500
+					+fs(16rem)
+					line-height: 1.5
+					font-weight: 700
 					+textover(2)
-					margin-bottom: 10px
+					a
+						display: block
+						+textover(2)
+					&:hover
+						color: $color-default
+				time
+					display: inline-block
+					+bor-rad(3px)
+					background: $color-default
+					color: $white
+					font-weight: 500
+					+fs(13rem)
+					line-height: 1
+					padding: 5px 10px
+					margin-top: 5px
 				.news-des
 					+fs(14rem)
-					+textover(2)
+					line-height: 1.8
+					+textover(4)
 					color: darken($white,60%)
-					margin-bottom: 20px
-				.link-wrap
-					text-align: right
-				.btn-link
-					+fs(11rem)
-					font-weight: 700
-					text-transform: uppercase
-					color: darken($white,60%)
-					&:after
-						content: "\e87a"
-						font-family: Linearicons-Free
-						+fs(11rem)
-						font-weight: normal
-						margin-left: 5px
+					margin-top: 10px
 
 .sidebar-title
 	+fs(14rem)
@@ -288,19 +329,21 @@
 
 .sidebar-categories
 	margin: 40px 0
+	border: 1px solid darken($white,5%)
+	+bor-rad(5px)
+	padding: 30px
+	.sidebar-title
+		@extend .title
+		+fs(28rem)
 	.categories-link, .categories
 		li
 			margin-bottom: 10px
 			a
-				display: block
-				+fs(14rem)
-				font-weight: 500
-				+bor-rad(10px)
-				background: darken($white,10%)
-				padding: 10px 20px
+				line-height: 2
+				opacity: 0.6
 				&:hover
-					background: linear-gradient(to right, $color-default, $color-primary)
-					color: $white
+					color: $color-default
+					opacity: 1
 
 .sidebar-news
 	margin-bottom: 40px
@@ -322,6 +365,34 @@
 		font-weight: 500
 		&:hover
 			color: $color-default
+.sidebar-album-list
+	@extend .news-list3
+	li
+		border-bottom: 1px dashed darken($white,10%)
+		padding-bottom: 10px
+		padding-left: 25px
+		&:before
+			content: '\f1c5'
+			width: auto
+			height: auto
+			background: none
+			color: $color-default
+			+fs(14rem)
+			top: 2px
+.sidebar-video-list
+	@extend .news-list3
+	li
+		border-bottom: 1px dashed darken($white,10%)
+		padding-bottom: 10px
+		padding-left: 25px
+		&:before
+			content: '\f1c8'
+			width: auto
+			height: auto
+			background: none
+			color: $color-default
+			+fs(14rem)
+			top: 2px
 
 .news-list4
 	.news-item

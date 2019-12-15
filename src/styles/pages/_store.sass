@@ -1,0 +1,43 @@
+.store-section
+	padding: 120px 0
+	.system-map
+		.findmap-wrap
+			height: 100%
+			background: darken($white,3%)
+			.findmap
+				background: $color-primary
+				color: $white
+				padding: 15px
+				border-bottom: 1px solid darken($white,10%)
+				.filtermap
+					.label
+						+fs(14rem)
+						text-transform: uppercase
+						margin-bottom: 5px
+					.field
+						margin-bottom: 5px
+						select
+							+fs(13rem)
+							width: 100%
+							+bor-rad(3px)
+							padding: 8px 15px
+							border: 1px solid darken($white,10%)
+			.addresslist
+				height: calc(500px - 137px)
+			.dealer-list
+				height: 100%
+				overflow: auto
+				+fs(13rem)
+				&::-webkit-scrollbar-track
+					background-color: #F5F5F5
+				&::-webkit-scrollbar
+					width: 3px
+					background-color: #F5F5F5
+				&::-webkit-scrollbar-thumb
+					background-color: $color-primary
+				li
+					cursor: pointer
+					padding: 10px
+					border-bottom: 1px dashed darken($white,10%)
+					&:hover
+						background: color-rgba($black,0.1)

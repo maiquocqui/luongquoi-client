@@ -1,13 +1,55 @@
 header
-	+pos(fix, 0 0 null 0)
-	z-index: 500
-	background: $color-primary
+	// +pos(fix, 0 0 null 0)
+	// z-index: 500
+	background: $white
 	+transition(all,0.5s)
-	.header-wrap
-		+flexbox
-		align-items: center
-		align-content: center
-		justify-content: space-between
+	.header-top
+		background: $white
+		.header-top-wrap
+			+flexbox
+			align-items: center
+			align-content: center
+			height: 80px
+			.logo
+				flex: 1
+				+flexbox
+				align-items: center
+				align-content: center
+				justify-content: center
+				+media-breakpoint-down(lg)
+					height: 50px
+				a
+					display: block
+					img
+						height: 60px
+						+media-breakpoint-down(lg)
+							height: 40px
+			.header-left
+				flex: 3
+				+flexbox
+				align-items: center
+				align-content: center
+				.phone, .email
+					color: darken($white,50%)
+					+flexbox
+					align-items: center
+					align-content: center
+					// font-weight: 500	
+					.lnr
+						color: $color-primary
+						+fs(18rem)
+						font-weight: bold
+						margin-right: 5px
+				.phone
+					margin-left: 20px
+					.lnr
+						+fs(16rem)
+			.header-right
+				flex: 3
+				+flexbox
+				align-items: center
+				align-content: center
+				justify-content: flex-end
 	.btn-showmenu
 		display: none
 		color: $white
@@ -26,19 +68,18 @@ header
 		z-index: 500
 		background: color-rgba($black,0.8)
 		+media-breakpoint-down(lg)
-	.logo
-		height: 70px
-		+flexbox
-		align-items: center
-		align-content: center
-		+media-breakpoint-down(lg)
-			height: 50px
-		a
+	.header-menu
+		background: lighten($color-default,0%)
+		+pos(rel,null)
+		padding-top: 20px
+		&:before
+			content: ''
 			display: block
-			img
-				height: 50px
-				+media-breakpoint-down(lg)
-					height: 40px
+			width: 100%
+			height: 20px
+			background: url(../img/headerbg.png) top center repeat-x
+			+pos(abs, 0 0 null 0)
+			z-index: 1
 	.menu
 		+media-breakpoint-down(lg)
 			+pos(abs, 0 null 0 0)
@@ -54,8 +95,8 @@ header
 		+flexbox
 		align-items: center
 		align-content: center
+		justify-content: center
 		+fs(15rem)
-		font-weight: 300
 		+media-breakpoint-down(lg)
 			flex-direction: column
 			align-items: stretch
@@ -66,16 +107,15 @@ header
 			+media-breakpoint-down(lg)
 				padding: 0
 			+ li
-				margin-left: 40px
+				margin-left: 30px
 				+media-breakpoint-down(lg)
 					margin-left: 0
 			> a
 				display: block
-				color: $white
-				padding: 5px 0
-				border-bottom: 1px solid transparent
-				// font-weight: 300
-				// text-transform: uppercase
+				font-weight: 500
+				color: darken($white,0%)
+				padding: 7px 15px
+				+bor-rad(5px)
 				+media-breakpoint-down(lg)
 					color: $main
 					padding: 10px 20px
@@ -103,23 +143,35 @@ header
 								color: $color-default
 			&:hover
 				a
-					// border-bottom: 1px solid $white
-				.sub-menu
-					display: block
-					visibility: visible
-					opacity: 1
+				// .sub-menu
+				// 	display: block
+				// 	visibility: visible
+				// 	opacity: 1
+			&.active
+				a
+					background: $color-primary
+					color: $white
+					font-weight: 500
 	.header-right
-		+flexbox
-		align-items: center
-		align-content: center
 		.search
 			.search-toggle
 				color: $white
-				+fs(24rem)
+				+fs(16rem)
+				font-weight: bold
 				line-height: 1
 				cursor: pointer
+				background: $color-default
+				width: 40px
+				height: 40px
+				+flexbox
+				align-items: center
+				align-content: center
+				justify-content: center
+				+bor-rad(100px)
 				+media-breakpoint-down(lg)
 					+fs(18rem)
+				&:hover
+					background: $color-primary
 			.dropdown-menu
 				border: none
 				padding: 0
@@ -145,14 +197,25 @@ header
 						content: '\f002'
 						+fs(14rem)
 		.language
-			margin-left: 20px
+			margin-left: 10px
 			.language-toggle
 				color: $white
-				+fs(24rem)
+				+fs(16rem)
+				font-weight: bold
 				line-height: 1
 				cursor: pointer
+				background: $color-default
+				width: 40px
+				height: 40px
+				+flexbox
+				align-items: center
+				align-content: center
+				justify-content: center
+				+bor-rad(100px)
 				+media-breakpoint-down(lg)
 					+fs(18rem)
+				&:hover
+					background: $color-primary
 			.dropdown-menu
 				+fs(13rem)
 				border: none
@@ -164,14 +227,3 @@ header
 						color: $color-default
 					&.active
 						background: $color-default
-.fullpage
-	padding-top: 70px
-.homepage
-	.fullpage
-		padding-top: 0
-	header
-		+pos(fix,0 0 null 0)
-		z-index: 500
-		background: transparent
-		&.active
-			background: $color-primary

@@ -1,21 +1,117 @@
 .product-page
-	padding: 40px 0
-	.product-list
-		.product
-			display: block
-			background: $white
-			+bor-rad(5px)
-			overflow: hidden
-			margin-bottom: 30px
-			border: 1px solid color-rgba($black,0.05)
-			box-shadow: 0px 5px 15px color-rgba($black,0.05)
+	padding: 60px 0
+	+pos(rel,null)
+	.bg
+		+pos(abs, null 0 0 0)
+		top: 0
+		z-index: -1
+		filter: brightness(70%)
+		// opacity: 0.1
+.pr-short-intro
+	text-align: center
+	.img
+		+flexbox
+		align-items: center
+		align-content: center
+		justify-content: center
+		height: 320px
+		margin-bottom: 10px
+		img
+			max-width: 100%
+			max-height: 100%
+	.caption
+		.name
+			+fs(32rem)
+			line-height: 1.2
+			font-family: 'Baloo Bhaina', cursive
+			font-weight: bold
+			color: $color-default
+		.en-name
+			+fs(24rem)
+			line-height: 1.2
+			font-family: 'Baloo Bhaina', cursive
+			font-weight: bold
+			color: $color-primary
+			margin-bottom: 10px
+		.des
+			+fs(14rem)
+			color: darken($white,60%)
+			margin-bottom: 10px
+		.link
+			+fs(13rem)
+			font-weight: 500
+			color: $color-default
+			text-transform: uppercase
+			&:after
+				content: '\f138'
+				margin-left: 5px 
 			&:hover
-				box-shadow: 0px 5px 15px color-rgba($color-default, 0.3)
-			.caption
-				padding: 15px 20px
-				.name
-					color: $color-primary
+				color: $color-primary
+
+
+.product-list-bak
+	margin-bottom: -40px
+	.product
+		+flexbox
+		margin-bottom: 50px
+		.icon
+			width: 50%
+			height: 250px
+			+flexbox
+			align-items: center
+			align-content: center
+			justify-content: center
+			img
+				max-height: 100%
+				max-width: 100%
+		.caption
+			width: 60%
+			.name
+				+fs(32rem)
+				line-height: 1.2
+				font-family: 'Baloo Bhaina', cursive
+				font-weight: bold
+				color: $color-default
+			.name2
+				+fs(24rem)
+				line-height: 1.2
+				font-family: 'Baloo Bhaina', cursive
+				font-weight: bold
+				color: $color-primary
+			.des
+				background: darken($white,10%)
+				+fs(14rem)
+				+bor-rad(10px)
+				padding: 30px
+				margin-top: 10px
+				+pos(rel,null)
+				&:before
+					content: '\f10d'
+					display: block
+					+fs(18rem)
 					font-weight: 700
+					color: darken($white,60%)
+					+pos(abs,5px null null 10px)
+				&:after
+					content: '\f10e'
+					display: block
+					+fs(18rem)
+					font-weight: 700
+					color: darken($white,60%)
+					+pos(abs, null 15px 5px null)
+				p
+					+textover(4)
+			.link
+				display: inline-block
+				margin-top: 10px
+				+fs(12rem)
+				font-weight: 700
+				text-transform: uppercase
+				color: $color-default
+				&:after
+					content: '\f138'
+					+fs(14rem)
+					margin-left: 5px
 
 .product-banner
 	img
@@ -24,6 +120,8 @@
 .product-section
 	padding: 60px 0
 	+pos(rel,null)
+	&.s2
+		background: darken($white,3%)
 	.bg
 		+pos(abs, null 0 0 0)
 		z-index: -1
@@ -78,3 +176,81 @@
 .cert-slide
 	.logo
 		text-align: center
+
+.product-categories
+	padding: 60px 0
+	.cate
+		+pos(rel,null)
+		+bor-rad(5px)
+		overflow: hidden
+		display: block
+		.img
+			img
+				width: 100%
+				height: 200px
+				object-fit: cover
+		.caption
+			+pos(abs, 0 null 0 0)
+			right: 0
+			background: color-rgba($black,0.3)
+			+flexbox
+			align-items: center
+			align-content: center
+			justify-content: center
+			+transition(all,0.5s)
+			.name
+				text-align: center
+				@extend .title
+				+fs(36rem)
+				color: $white
+		&:hover
+			.caption
+				background: color-rgba($black,0.1)
+		&.active
+			.caption
+				background: color-rgba($color-default,0.7)
+
+.product-page-intro
+	// background: $color-default
+	+pos(rel,null)
+	.bg
+		+pos(abs, 0 null 0 0)
+		right: 0
+		opacity: 0.1
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+	.img-block
+		margin-bottom: 60px
+		img
+			max-height: 500px
+
+
+.product-list
+	margin-bottom: 120px
+	.product
+		+flexbox
+		align-items: center
+		align-content: center
+		justify-content: center
+		.img
+			width: 100px
+			height: 100px
+			+bor-rad(100px)
+			overflow: hidden
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
+		.caption
+			width: calc(100% - 100px)
+			padding-left: 20px
+			.name
+				@extend .home-title
+				+fs(28rem)
+				margin: 0
+		&:hover
+			.caption
+				.name
+					color: $color-default

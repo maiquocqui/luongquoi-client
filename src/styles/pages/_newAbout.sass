@@ -1,262 +1,516 @@
 .horizon-nav
+	+pos(rel,null)
 	ul
 		+flexbox
 		justify-content: center
-		border-bottom: 1px solid darken($white,10%)
+		+bor-rad(5px 5px 0 0)
+		overflow: hidden
+		background: darken($color-primary,0%)
+		+pos(abs, null null 0 50%)
+		+transform(translateX(-50%))
 		li
 			a
 				display: block
-				padding: 20px 25px
-				+pos(rel,null)
-				&:before 
-					content: ''
-					display: block
-					width: 2px
-					height: 20px
-					background: $color-primary
-					box-shadow: 5px 8px 0 color-rgba($black,0.3)
-					+transform(rotateZ(-20deg))
-					+pos(abs, 18px null null 10px)
-					visibility: hidden
-					opacity: 0
-					margin-left: 10px
-					+transition(all,0.5s)
+				+bor-rad(5px 5px 0 0)
+				+fs(13rem)
+				letter-spacing: 1px
+				text-transform: uppercase
+				padding: 15px 30px
+				color: $white
+				font-weight: 500
+				white-space: nowrap
 			&:hover
 				a
 					color: $color-default
 			&.active
 				a
 					font-weight: 700
-					&:before
-						margin-left: 0
-						opacity: 1
-						visibility: visible
+					color: $color-primary
+					background: $white
+
 .vct-section
-	padding: 60px 0 120px
-	.title
-		text-transform: uppercase
-		color: $color-default 
-		line-height: 1.2
-		padding-left: 30px
-		margin-bottom: 40px
+	@extend .home-section
+	.img-block
+		padding-right: 30px
+		.img1
+			margin-right: 80px
+			+pos(rel,null)
+			&:before
+				content: ''
+				display: block
+				width: 430px
+				height: 430px
+				+bor-rad(500px)
+				background: lighten($color-default,45%)
+				+pos(abs, 50% null null 0)
+				+transform(translate(-50%,-50%))
+			img
+				+bor-rad(5px)
+				overflow: hidden
+				+pos(rel,null)
+				z-index: 3
+			.icon
+				+flexbox
+				align-items: center
+				align-content: center
+				justify-content: center
+				width: 120px
+				height: 120px
+				+bor-rad(100px)
+				background: lighten($color-default,30%)
+				+pos(abs, 50% null null 0)
+				+transform(translate(-50%,-50%))
+				z-index: 5
+				img
+					max-width: 50%
+					max-height: 50%
+					opacity: 0.8
+		.img2
+			margin-top: -160px
+			margin-left: 160px
+			+bor-rad(5px)
+			overflow: hidden
+			+pos(rel,null)
+			z-index: 5
+	.content-block
+		margin-bottom: 60px
+	.strong-block
+		// background: $color-primary
+		background: darken($white,5%)
+		padding: 60px
+		+bor-rad(5px)
+		.strong-title
+			@extend .home-title
+			// color: $white
+			margin-bottom: 0
+			+fs(36rem)
+	.content
+		line-height: 2rem
+		text-align: justify
+
+.tnsm-section
+	@extend .home-section
+	// background: darken($color-primary,20%)
+	background: $color-default
+	+pos(rel,null)
+	.bg
+		+pos(abs, 0 null 0 0)
+		right: 0
+		opacity: 0.1
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+	.img-block
+		+bor-rad(5px)
+		overflow: hidden
+		height: 100%
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+	.tn-block, .sm-block
+		padding: 40px
+		+pos(rel,null)
+		+bor-rad(5px)
+		height: 100%
+		background: $color-primary
+	.tn-block
+		// background: $color-default
+	.sm-block
+		// background: $color-primary
+	.home-title
+		+fs(36rem)
+		color: $white
+		margin-bottom: 15px
+	.content
+		color: $white
+		line-height: 2
+		p
+			margin: 0
+
+.gtcl-section
+	+pos(rel,null)
+	&:before
+		content: ''
+		display: block
+		+pos(abs, 0 50% 0 0)
+		background: lighten($color-default,50%)
+	.content-block
+		padding: 120px 0 0
+		padding-right: 120px
+		background: lighten($color-default,50%)
+	.gt-col
+		+flexbox
+		margin-bottom: 30px
+		.icon
+			width: 50px
+			height: 50px
+			+flexbox
+			align-items: center
+			align-content: center
+			justify-content: center
+			background: $color-primary
+			+bor-rad(100px)
+			img
+				max-width: 60%
+				max-height: 60%
+				filter: invert(100%)
+				margin: 0
+		.caption
+			width: calc(100% - 50px)
+			padding-left: 15px
+			+fs(16rem)
+			.name
+				font-weight: 700
+			.des
+	.img-block
+		margin-top: 120px
 		+pos(rel,null)
 		&:before
 			content: ''
 			display: block
-			+pos(abs, 0 null 0 0)
-			width: 5px
-			background: linear-gradient(to bottom, $color-default, $color-primary)
-		h3
-			+fs(48rem)
-			font-weight: 900
-			margin-bottom: 8px
-			color: $color-primary
-		h4
-			+fs(28rem)
-			font-weight: 500
-			letter-spacing: 5px
-			margin-bottom: 6px
-			color: #214e6f
-		h5
-			+fs(24rem)
-			font-weight: 500
-			letter-spacing: 2.35px
-	.intro-img
-		+bor-rad(10px)
-		overflow: hidden
-	.shadow-block
-		background: $white
-		padding: 40px
-		box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1)
-		border-radius: 10px
-		.icon
-			// width: 128px
-			margin-bottom: 15px
-			img
-				max-width: 64px
-		.icon2
-			width: 86px
-			height: 86px
-			+bor-rad(1000px)
-			background: $color-primary
-			+flexbox
-			align-items: center
-			justify-content: center
-			margin-bottom: 15px
-			img
-				filter: invert(100%)
-				max-width: 48px
-		.block-title
-			+fs(18rem)
-			font-weight: 700
-			margin-bottom: 10px
-	.story
-		margin-left: -100px
-	.vision
-		margin-top: -40px
-	.mission
-		box-shadow: none
-		background: darken($white,5%)
-		margin-top: 45px
-		+flexbox
-		.icon2
-			min-width: 86px
-			margin-right: 15px
-.about-title2
-	+fs(32rem)
-	font-weight: 700
-	color: $main
-	padding-left: 20px
-	margin-bottom: 30px
-	+pos(rel,null)
-	&:before 
-		content: ''
-		display: block
-		width: 3px
-		height: 30px
-		background: $color-primary
-		box-shadow: 8px 12px 0 color-rgba($black,0.3)
-		+pos(abs, 3px null null 0)
-.gtcl-section
-	padding: 0
-	background: url(../img/vnl3.jpg) center center / cover no-repeat
-  background-attachment: fixed
-	+pos(rel,null)
-	margin-bottom: 100px
-	&:before
-		content: ''
-		display: block
-		+pos(abs, 0 null 0 0)
-		right: 0
-		background: color-rgba($color-primary,0.4)
-	.title
-		+fs(32rem)
-		font-weight: 700
-		color: $white
-		padding-left: 20px
-		+pos(abs,40px null null auto)
-		&:before 
+			width: 265px
+			height: 530px
+			+bor-rad(0 1000px 1000px 0)
+			+pos(abs, 50% null null 100%)
+			+transform(translateY(-50%))
+			background: lighten($color-default,50%)
+		&:after
 			content: ''
 			display: block
-			width: 3px
-			height: 30px
-			background: $color-default
-			box-shadow: 8px 12px 0 color-rgba($white,0.5)
-			+pos(abs, 3px null null 0)
-	.block
-		background: $color-primary
-		color: $white
-		padding: 40px 70px
-		margin: -40px 0
-		.gt-col
-			+flexbox
-			align-items: center
-			align-content: center
-			margin-bottom: 30px
-		.icon
-			width: 86px
-			height: 86px
-			+bor-rad(100px)
-			+flexbox
-			align-items: center
-			justify-content: center
+			width: 110px
+			height: 220px
+			+bor-rad(0 1000px 1000px 0)
+			+pos(abs, 50% null null 100%)
+			+transform(translateY(-50%))
 			background: $white
-			img
-				max-width: 48px
-				margin: 0
-				opacity: 0.7
-		.caption
-			max-width: calc(100% - 86px)
-			padding-left: 20px
-			.name
-				+fs(24rem)
-				line-height: 1.2
-				// text-transform: uppercase
-				font-weight: 700
-				margin-bottom: 5px
-			.des
+
+.history-page
+	padding: 120px 0
+	text-align: center
+	.history-picture
+		.item
+			vertical-align: top
+		img
+			width: 100%
+			height: 600px
+			object-fit: cover
+	.history-year
+		width: 250px
+		+bor-rad(5px 5px 0 0)
+		background: $color-default
+		margin: -108px auto 0
+		text-align: center
+		.slick-prev, .slick-next
+			+pos(abs, 50% null null null)
+			+transform(translateY(-50%))
+			+fs(0)
+			z-index: 5
+			color: $white
+			&:before
+				content: ''
+				+fs(32rem)
+		.slick-prev
+			left: -40px
+			&:before
+				content: '\f060'
+		.slick-next
+			right: -40px
+			&:before
+				content: '\f061'
+		.year
+			+fs(68rem)
+			line-height: 1
+			color: $white
+			padding: 20px 0
+			font-weight: 700
+	.history-event
+		text-align: center
+		padding: 40px 0
+		.item
+			.content
+				+fs(28rem)
+				max-width: 700px
+				margin: 0 auto
+				p
+					&:last-child
+						margin-bottom: 0
+	.history-nav
+		border-top: 1px solid darken($white,10%)
+		padding-top: 30px
+		.item
+			cursor: pointer
+			.year
+				@extend .title
+				+fs(36rem)
+				&:after
+					content: ''
+					display: block
+					width: 100%
+					height: 18px
+					margin: 10px auto 0
+					background: url(../img/branch.png) center left no-repeat
+					background-size: auto 100%
+					background-position-x: center
+					opacity: 0
+					+transition(all,0.3s)
+				&:hover
+					color: $color-default
+		.slick-current
+			.item
+				.year
+					color: $color-default
+					&:after
+						opacity: 1
 
 .htqt-section
-	padding: 60px 0
+	@extend .home-section
 	.content
-		margin-bottom: 40px
+		line-height: 2
 	.staff-list
 		.staff-item
-			max-width: 250px
-			margin: 0 auto 30px
+			margin-bottom: 30px
+			cursor: pointer
 			.img
-				img
+				+bor-rad(5px)
+				overflow: hidden
 			.caption
-				padding: 10px
+				background: $white
+				+bor-rad(5px)
+				margin: -20px 20px 0
+				+pos(rel,null)
+				z-index: 3
+				padding: 30px
 				text-align: center
+				+transition(all,0.5s)
 				.name
-					+fs(15rem)
-					font-weight: 500
-					text-transform: uppercase
-					strong
-						color: $color-primary
+					+fs(20rem)
 				.vt
-					+fs(12rem)
-					text-transform: uppercase
-					color: darken($white,50%)
+					opacity: 0.8
+			&:hover
+				.caption
+					box-shadow: 0px 3px 10px color-rgba($black,0.1)
 
 .dvtt-section
-	padding: 60px 0
+	@extend .home-section
 	.content
-		margin-bottom: 40px
+		line-height: 2
 	.office
 		.img
-			margin-bottom: 20px
+			+pos(rel,null)
+			+bor-rad(5px)
+			overflow: hidden
+			margin-bottom: 30px
+			&:before
+				content: ''
+				display: block
+				+pos(abs, 0 null 0 0)
+				right: 0
+				background: linear-gradient(color-rgba($black,0),color-rgba($black,0.5))
 			img
 				width: 100%
 				height: 500px
 				object-fit: cover
-		.caption
-			background: darken($white,5%)
-			padding: 25px
-			min-height: 170px
 			.name
-				+fs(16rem)
-				// min-height: 54px
-				font-weight: 700
-				color: $color-primary
-				margin-bottom: 5px
-			.phone, .location, .email
-				+fs(14rem)
+				@extend .title
+				+fs(36rem)
+				color: $white
+				+pos(abs, null 0 0 0)
+				padding: 40px
+		.caption
+			.location, .phone, .email
 				+pos(rel,null)
-				padding-left: 20px
-				&:before
-					content: ''
+				line-height: 2
+				padding-left: 30px
+				margin-bottom: 10px
+				.fa
+					+fs(18rem)
+					+pos(abs, 8px null null 0)
 					color: $color-default
-					+pos(abs, 0 null null 0)
-			.location
-				&:before
-					content: '\f041'
-			.phone
-				&:before
-					content: '\f095'
-			.email
-				&:before
-					content: '\f0e0'
-.dvtt-list
-	padding: 60px 0
+
+.ttnb-section
+	@extend .home-section
+	.content
+		line-height: 2
+	.achievement
+		.img
+			+bor-rad(5px)
+			overflow: hidden
+		.caption
+			padding-top: 15px
+
+.vnl-section
+	@extend .home-section
+	.content-block
+		// background: $color-primary
+		// padding: 60px
+		// +bor-rad(5px)
+		// .home-title, .content
+		// 	color: $white
+	.content
+		line-height: 2
+		// opacity: 0.8
+
+.vnl2-section
+	@extend .home-section
+	background: darken($color-primary,0%)
+	// background: lighten($color-default,50%)
+	// background: $color-default
 	+pos(rel,null)
-	&:before
-		content: ''
-		display: block
+	.bg
 		+pos(abs, 0 null 0 0)
 		right: 0
-		background: url(../img/vnl.jpg) center center / cover no-repeat
-		opacity: 0.2
-.ttnb-section
-	padding: 60px 0
+		opacity: 0.1
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+	.home-title
+		color: $white
 	.content
-		margin-bottom: 40px
-	.achievement-list
-		.achievement
-			text-align: center
-			.img
-				margin-bottom: 10px
-			.name
-				+fs(13rem)
-				text-align: center
+		color: $white
+		line-height: 2
+		opacity: 0.8
+	.img
+		+bor-rad(5px)
+		overflow: hidden
+		img
+			width: 100%
+			height: 300px
+			object-fit: cover
+
+.ptvnl-section
+	@extend .home-section
+	padding-bottom: 0
+	background: lighten($color-default,50%)
+	margin-bottom: 160px
+	.img-block
+		img
+			+bor-rad(5px)
+			overflow: hidden
+	.content-block
+		background: $white
+		padding: 60px
+		margin-top: 120px
+		margin-left: -120px
+		margin-bottom: -120px
+		+bor-rad(5px)
+		box-shadow: 0px 10px 20px color-rgba($black,0.1)
+	.content
+		line-height: 2
+.htcl-section
+	padding-top: 120px
+	.content-block
+		padding-right: 60px
+	.content
+		line-height: 2
+	.img-block
+		+pos(rel,null)
+		z-index: 3
+		+bor-rad(5px)
+		overflow: hidden
+		margin-bottom: -120px
+.htcl2-section
+	@extend .home-section
+	background: $color-default
+	padding-top: 240px
+	+pos(rel,null)
+	.bg
+		+pos(abs, 0 null 0 0)
+		right: 0
+		opacity: 0.1
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+	.home-title, .content
+		color: $white
+	.content
+		line-height: 2
+		opacity: 0.9
+.htcl3-section
+	@extend .home-section
+	padding-bottom: 0
+	.main-content
+		background: $white
+		+bor-rad(5px)
+		overflow: hidden
+		margin-bottom: -120px !important
+		+pos(rel,null)
+		z-index: 3
+	img
+		+bor-rad(5px)
+	.img-block
+		img
+			+bor-rad(5px 0 0 5px)
+	.content-block
+		background: $white
+		padding: 0px 60px
+		+bor-rad(0 5px 5px 0)
+		.img
+			width: 350px
+			margin: 0 auto 40px
+		.content
+			line-height: 2
+			padding: 0px 30px
+			text-align: justify
+			text-align-last: center
+			p
+				&:last-child
+					margin-bottom: 0
+.htcl4-section
+	@extend .home-section
+	padding-top: 240px
+	background: lighten($color-default,50%)
+	.cert-slide2
+		margin: 0px -15px
+		.item
+			padding: 0px 15px
+
+.tnxh-section
+	@extend .home-section
+	.content
+		line-height: 2
+		padding-right: 120px
+	.img-block
+		+bor-rad(5px)
+		overflow: hidden
+
+.tnxh2-section
+	@extend .home-section
+	background: $color-default
+	+pos(rel,null)
+	.bg
+		+pos(abs, 0 null 0 0)
+		right: 0
+		opacity: 0.1
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+	.content
+		color: $white
+		text-align: center
+		max-width: 1020px
+		margin: 0 auto
+		+fs(36rem)
+		p
+			@extend .title
+.tnxh3-section
+	@extend .home-section
+.tnxh4-section
+	@extend .home-section
+	background: lighten($color-default,50%)
+	.content
+		line-height: 2
+		p
+			&:last-child
+				margin-bottom: 0
+	.img
+		margin-bottom: 30px
+		img
+			+bor-rad(5px)
+			width: 100%
+			height: 300px
+			object-fit: cover

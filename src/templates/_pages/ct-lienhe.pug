@@ -1,55 +1,71 @@
 section.breadcrumb-wrap.clearfix
 	.breadcrumb-bg(style="background: url(img/br2.jpg) center center no-repeat;background-size:cover")
+	h3.page-name Liên hệ
+section.contact-page
+	.address-section
+		.container
+			.row
+				.col-12.col-md-3
+					.address-item
+						.name Trụ sở chính
+						.des Lô A36, A37 Khu Công nghiệp An Hiệp, Châu Thành, Bến Tre
+							br
+							a(href="tel:(+84).28.3762.8850") (+84).28.3762.8850
+				.col-12.col-md-3
+					.address-item
+						.name Chi nhánh TP.Hồ Chí Minh
+						.des 121, đường 24A, phường Bình Trị Đông B, quận Bình Tân, TP HCM
+							br
+							a(href="tel:(+84).28.3762.8850") (+84).28.3762.8850
+				.col-12.col-md-3
+					.address-item
+						.name Showroom giới thiệu sản phẩm Bến Tre
+						.des 74C, Đại lộ Đồng Khởi, Khu phố 6, Phường Phú Khương, TP. Bến Tre
+							br
+							a(href="tel:(+84).28.3762.8850") (+84).28.3762.8850
+				.col-12.col-md-3
+					.address-item
+						.name Văn phòng tại Mỹ
+						.des 916 Pleasant Street, Suite 22, Norwood, MA 02062
+							br
+							a(href="tel:(+84).28.3762.8850") (+84).28.3762.8850
+							br
+							a(href="mailto:info@cocogoodsco.com") info@cocogoodsco.com
+.contact-form
 	.container
-		ol.breadcrumb
-			li
-				a(href="#")
-					span Trang chủ
-			li
-				a(href="#")
-					span Liên hệ
-		h3.page-name Liên hệ
-
-.container
-	section.contact-page
-		.maps 
-			iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.9025875844986!2d106.28336371533251!3d10.269432371153504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310aa692e92da765%3A0x9fbb454088583d2c!2zQ8O0bmcgdHkgVE5ISCBDaOG6vyBCaeG6v24gROG7q2EgTMawxqFuZyBRdeG7m2k!5e0!3m2!1svi!2s!4v1571751317603!5m2!1svi!2s' width='100%' height='400' frameborder='0' style='border:0;' allowfullscreen)
-		.row
-			.col-12.col-lg-4
-				.contact-detail
-					.logo
-						img(src="img/logo.png", alt="alt")
-					.company CÔNG TY TNHH CHẾ BIẾN DỪA LƯƠNG QUỚI
-					.contact-info
-						ul
-							li <i class="fa fa-envelope" aria-hidden="true"></i> Email : support@luongquoi.vn
-							li <i class="fa fa-phone" aria-hidden="true"></i> Hotline : (+84).28.3762.8850
-							li <i class="fa fa-map-marker" aria-hidden="true"></i> Địa chỉ : Lô A36-A37, Khu công nghiệp An Hiệp, Xã An Hiệp, Huyện Châu Thành, Tỉnh Bến Tre.
-
-			.col-12.col-lg-8
-				.contact-form
-					.form-wrap
-						.module-title Nếu bạn có ý kiến góp ý hoặc yêu cầu cần hỗ trợ từ chúng tôi, vui lòng liên lạc ngay tại đây. Chúng tôi sẽ xem xét và phản hồi sớm nhất có thể.
-						.form-row
-							.col-12.col-lg-6
-								.form-group
-									//- label Họ tên
-									input(type="text" placeholder="Họ tên")
-							.col-12.col-lg-6
-								.form-group
-									//- label Email
-									input(type="text" placeholder="Email")
-							.col-12.col-lg-6
-								.form-group
-									//- label Số điện thoại
-									input(type="text" placeholder="Số điện thoại")
-							.col-12.col-lg-6
-								.form-group
-									//- label Tên công ty
-									input(type="text" placeholder="Tên công ty")
-							.col-12
-								.form-group
-									//- label Nội dung
-									textarea(name="", cols="30", rows="10", placeholder="Nội dung")
-						.btn-wrap
-							input(type="submit", value="Gửi")
+		.row.no-gutters
+			.col-12.col-lg-7
+				.form-wrap
+					.module-title Để lại lời nhắn cho chúng tôi
+					.form-row
+						.col-12.col-lg-6
+							.form-group
+								//- label Họ tên
+								input(type="text" placeholder="Họ tên")
+						.col-12.col-lg-6
+							.form-group
+								//- label Email
+								input(type="text" placeholder="Email")
+						.col-12.col-lg-6
+							.form-group
+								//- label Số điện thoại
+								input(type="text" placeholder="Số điện thoại")
+						.col-12.col-lg-6
+							.form-group
+								//- label Tên công ty
+								input(type="text" placeholder="Tên công ty")
+						.col-12
+							.form-group
+								//- label Nội dung
+								textarea(name="", cols="30", rows="3", placeholder="Nội dung")
+					.btn-wrap
+						input(type="submit", value="Gửi")
+			.col-12.col-lg-5
+				.content-block
+					.img-block
+						img(src="img/contact.jpg", alt="alt")
+					.home-title.text-center Have question?
+					.content.text-center
+						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur labore atque asperiores aperiam incidunt odit quo error suscipit temporibus minus!
+.map
+	iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.9026531138416!2d106.28336371525363!3d10.269427092666783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310aa692e92da765%3A0x9fbb454088583d2c!2zQ8O0bmcgdHkgVE5ISCBDaOG6vyBCaeG6v24gROG7q2EgTMawxqFuZyBRdeG7m2k!5e0!3m2!1svi!2s!4v1576404898847!5m2!1svi!2s' width='100%' height='450' frameborder='0' style='border:0;' allowfullscreen)

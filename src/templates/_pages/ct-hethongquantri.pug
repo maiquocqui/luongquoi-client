@@ -1,14 +1,6 @@
 section.breadcrumb-wrap.clearfix
 	.breadcrumb-bg(style="background: url(img/br6.jpg) center center no-repeat;background-size:cover")
-	.container
-		ol.breadcrumb
-			li
-				a(href="#")
-					span Trang chủ
-			li
-				a(href="#")
-					span Giới thiệu
-		h3.page-name
+	h3.page-name Giới thiệu
 nav.horizon-nav
 	.container
 		ul
@@ -24,21 +16,14 @@ nav.horizon-nav
 				a(href="#!") Thành tích nổi bật
 section.htqt-section
 	.container
-		.about-title2 Hệ thống quản trị
-		.content
-			p Để tạo dựng được sự thành công và phát triển trong hơn 20 năm qua là thành quả từ nỗ lực của tất cả đội ngũ công nhân viên công ty, sự lãnh đạo sáng suốt và quyết đoán của Ban giám đốc và những nhân sự chủ chốt – những người luôn cháy hết mình vì sự thành công của công ty.
-			p Công ty TNHH Chế Biến Dừa Lương Quới đã xây dựng hệ thống các nguyên tắc cơ bản về quản trị nhằm bảo vệ quyền lợi hợp pháp cho toàn thể công nhân viên cũng như thiết lập những chuẩn mực về hành vi, đạo đức nghề nghiệp của Ban Giám Đốc, Ban Kiểm Soát, cán bộ quản lý của công ty. Quy chế này nhằm đảm bảo sự phát triển bền vững và xây dựng văn hóa riêng của công ty Dừa Lương Quới. 
+		.row
+			.col-12.col-lg-4
+				.home-title Hệ thống quản trị
+			.col-12.col-lg-8
+				.content
+					p Để tạo dựng được sự thành công và phát triển trong hơn 20 năm qua là thành quả từ nỗ lực của tất cả đội ngũ công nhân viên công ty, sự lãnh đạo sáng suốt và quyết đoán của Ban giám đốc và những nhân sự chủ chốt – những người luôn cháy hết mình vì sự thành công của công ty.
 		.staff-list
-			.row.justify-content-center
-				.col-12.col-md-4
-					.staff-item(data-toggle="modal" data-target="#staffModal")
-						.img
-							img(src="img/cuvanthanh.jpg", alt="alt")
-						.caption
-							.name Ông 
-								strong Cù Văn Thành
-							.vt Chủ tịch HĐQT kiêm Giám đốc
-			.row.justify-content-center
+			.row
 				.col-12.col-md-4
 					.staff-item(data-toggle="modal" data-target="#staffModal")
 						.img
@@ -63,7 +48,7 @@ section.htqt-section
 							.name Ông 
 								strong Cù Văn Thành
 							.vt Chủ tịch HĐQT kiêm Giám đốc
-			.row.justify-content-center
+			.row
 				.col-12.col-md-4
 					.staff-item(data-toggle="modal" data-target="#staffModal")
 						.img
@@ -88,6 +73,8 @@ section.htqt-section
 							.name Ông 
 								strong Cù Văn Thành
 							.vt Chủ tịch HĐQT kiêm Giám đốc
+		.content
+			p Công ty TNHH Chế Biến Dừa Lương Quới đã xây dựng hệ thống các nguyên tắc cơ bản về quản trị nhằm bảo vệ quyền lợi hợp pháp cho toàn thể công nhân viên cũng như thiết lập những chuẩn mực về hành vi, đạo đức nghề nghiệp của Ban Giám Đốc, Ban Kiểm Soát, cán bộ quản lý của công ty. Quy chế này nhằm đảm bảo sự phát triển bền vững và xây dựng văn hóa riêng của công ty Dừa Lương Quới. 
 .modal.fade#staffModal(tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true')
 	.modal-dialog.modal-lg(role='document')
 		.modal-content

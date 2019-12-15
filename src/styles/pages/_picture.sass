@@ -1,103 +1,97 @@
-.image-page
-
 .picture-page
 	margin: 40px 0
-
 	.album-list
 		.album-item
-			margin-bottom: 30px
-			cursor: pointer
 			+pos(rel,null)
+			+bor-rad(5px)
+			overflow: hidden
+			margin-bottom: 30px
 			.img
-				+bor-rad(10px)
+				+bor-rad(5px)
 				overflow: hidden
+				&:before
+					content: ''
+					display: block
+					+pos(abs, 0 null 0 0)
+					right: 0
+					z-index: 3
+					background: linear-gradient(color-rgba($black,0) 30%,color-rgba($black,0.8))
 				img
+					+bor-rad(5px)
+					overflow: hidden
 					width: 100%
-					height: 250px
+					height: 400px
 					object-fit: cover
 					+transition(all,0.3s)
 			.info
-				&:before
-					content: '\f1c5'
-					+flexbox
-					align-items: center
-					justify-content: center
-					background: $color-default
-					width: 60px
-					height: 60px
-					+fs(22rem)
-					color: $color-dark
-					+bor-rad(50px)
-					+pos(abs, null null 10px 10px)
-					z-index: 5
+				+pos(abs, null 0 0 0)
+				z-index: 5
+				padding: 30px
+				color: $white
+				+transition(all,0.3s)
 				.name
-					+fs(14rem)
-					line-height: 1.3
-					max-width: 80%
-					// font-weight: 500
-					background: color-rgba($color-dark,0.8)
-					+bor-rad(0 100px 100px 0)
-					padding: 10px 20px 10px 30px
-					color: $white
-					+pos(abs, null null 40px 50px)
-					+transform(translateY(50%))
+					@extend .title
+					+fs(32rem)
+					line-height: 1.2
 					+textover(2)
-					z-index: 3
-					+transition(all,0.3s)
-			&:hover
-				img
-					+transform(scale3d(1.1,1.1,1))
-				.info
-					.name
-						// letter-spacing: 2px
+					text-transform: uppercase
 
 	.card-columns 
 		.card
 			margin-bottom: 20px
 			border: none
 			box-shadow: none
+			img
+				+bor-rad(5px)
 
 .video-page
 	margin: 40px 0
 	.video-list
 		.video-item
-			+pos(rel,null)
 			display: block
+			+pos(rel,null)
 			margin-bottom: 30px
-			+transition(all,0.3s)
-			&:hover
-				box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.04), -10px 0 20px 0px rgba(0,0,0,0.04);
-				.img
-					img
-						+transform(scale3d(1.1,1.1,1))
 			.img
+				+bor-rad(5px)
 				overflow: hidden
+				+pos(rel,null)
+				&:before
+					content: '\f04b'
+					+fs(24rem)
+					display: block
+					padding: 15px 30px
+					color: $white
+					background: $color-default
+					+bor-rad(5px)
+					+pos(abs, 50% null null 50%)
+					+transform(translate(-50%,-50%))
+					z-index: 3
 				img
 					width: 100%
 					height: 230px
 					object-fit: cover
 					+transition(all,0.3s)
+					filter: brightness(80%)
 			.info
-				+pos(abs, null 0 0 0)
-				z-index: 3
-				padding: 15px 20px
-				padding-left: 80px
-				background: color-rgba($black,0.5)
-				color: $white
-				&:before
-					content: '\f144'
-					+fs(48rem)
-					+pos(abs, 50% null null 20px)
-					+transform(translateY(-50%))
+				padding: 15px 0
 				.name
 					+fs(18rem)
 					line-height: 1.2
 					font-weight: 700
 					+textover(2)
 				time
-					+fs(12rem)
-					line-height: 1
-					opacity: 0.7
+					display: block
+					+fs(13rem)
+					+pos(abs,0 null null 50%)
+					+transform(translateX(-50%))
+					background: $color-primary
+					color: $white
+					padding: 5px 20px
+					+bor-rad(0px 0px 5px 5px)
+			&:hover
+				.img
+					img
+						filter: brightness(100%)
 	.video-block
 		background: $white
 		+flexbox

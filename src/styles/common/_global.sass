@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese')
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Barlow:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap&subset=cyrillic,hebrew,latin-ext,vietnamese')
 
 body
-	font-family: 'Roboto', sans-serif
+	font-family: 'Barlow', sans-serif
 	font-size: 16px
 	line-height: 1.5
 	color: $main
@@ -10,6 +10,19 @@ body
 		line-height: inherit
 html
 	overflow: auto
+.title
+	line-height: 1.2
+	font-family: 'Amatic SC', cursive
+	font-weight: 700
+.s-title
+	+fs(14rem)
+	text-transform: uppercase
+	font-weight: 500
+	color: $color-default
+	letter-spacing: 2px
+hr
+	background: darken($white,10%)
+	border: none
 
 .fullpage
 	max-width: 100%
@@ -32,19 +45,12 @@ main
 
 .container
 	+pos(static,unset)
-	// +media-breakpoint-up(xl)
-	// 	max-width: 1280px
-	// 	width: 100%
+	+media-breakpoint-up(xl)
+		max-width: 1200px
+		width: 100%
 	+media-breakpoint-down(lg)
 		max-width: 100%
 		width: 100%
-	// +media-breakpoint-down(sm)
-	// 	// padding: 0px 10px
-	// &.full-width
-	// 	+media-breakpoint-up(xl)
-	// 		max-width: 1920px
-	// 		width: 100%
-	// 		padding: 0px 60px
 
 .container-fluid
 	+media-breakpoint-up(xl)
@@ -53,6 +59,7 @@ main
 
 
 .content
+	color: darken($white,60%)
 	// font-family: 'Montserrat', sans-serif
 	+fs(15rem)
 	line-height: 1.5

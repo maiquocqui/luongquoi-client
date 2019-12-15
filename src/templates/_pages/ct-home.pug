@@ -1,16 +1,69 @@
 .home-banner
 	.banner-slide
-		img(src="img/bn1.jpg", alt="alt")
+		img(src="img/banner2.jpg", alt="alt")
+		.container
+			.caption
+				h4 Khẳng định
+				h3 Vị trí tiên phong 
+					br
+					|Ngành chế biến dừa Việt Nam
+				a.viewmore(href="vechungtoi.html") Tìm hiểu thêm
 section.home-section.home-intro
 	.container
-		.text-center
-			img(src="img/dua1.png", alt="alt")
-		.home-title.text-center Câu chuyện về Lương Quới
-		.about 
-			p Công ty TNHH chế biến dừa Lương Quới được thành lập vào năm 1997 và bắt đầu hành trình gia tăng giá trị cho trái dừa bằng những sản phẩm khác biệt như: cơm dừa nạo sấy, dầu dừa tinh khiết, dầu dừa nguyên chất, dầu dừa tinh luyện, nước dừa, nước cốt dừa đóng lon và hộp giấy Tetra Pak,...
-			a.viewmore(href="#!") Xem thêm
-		.text-center
-			img(src="img/home-video.jpg", alt="alt")
+		.row
+			.col-12.col-lg-6
+				.home-stitle Giới thiệu
+				.home-title Câu chuyện về Lương Quới và hành trình gia tăng giá trị cho những trái dừa
+				.intro1
+					.icon
+						img(src="img/dua1.png", alt="alt")
+					.content
+						p Từng bước khẳng định vị thế dẫn đầu trong 
+							br
+							|ngành chế biến dừa.
+			.col-12.col-lg-6
+				.content 
+					p Công ty TNHH chế biến dừa Lương Quới được thành lập vào năm 1997 và bắt đầu hành trình gia tăng giá trị cho trái dừa bằng những sản phẩm khác biệt như: cơm dừa nạo sấy, dầu dừa tinh khiết, dầu dừa nguyên chất, dầu dừa tinh luyện, nước cốt dừa đóng lon...
+				hr.mb-5.mt-5
+				.video
+					img(src="img/video.jpg", alt="alt")
+					a.play(href="#!" data-fancybox) <i class="fa fa-play" aria-hidden="true"></i>
+section.home-section.home-product
+	.container
+		.home-product-list
+			.row
+				.col-12.col-lg-3
+					.product
+						.img
+							img(src="img/hpr1.jpg", alt="alt")
+						.caption
+							.name Thực phẩm
+							.des Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, odit.
+							a.readmore(href="#!") Chi tiết
+				.col-12.col-lg-3
+					.product
+						.img
+							img(src="img/hpr2.jpg", alt="alt")
+						.caption
+							.name Nước giải khát
+							.des Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, odit.
+							a.readmore(href="#!") Chi tiết
+				.col-12.col-lg-3
+					.product
+						.img
+							img(src="img/hpr3.jpg", alt="alt")
+						.caption
+							.name Mỹ phẩm
+							.des Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, odit.
+							a.readmore(href="#!") Chi tiết
+				.col-12.col-lg-3
+					.product
+						.img
+							img(src="img/hpr4.jpg", alt="alt")
+						.caption
+							.name Các sản phẩm khác
+							.des Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, odit.
+							a.readmore(href="#!") Chi tiết
 section.home-section.home-param
 	.container
 		.param-list
@@ -35,120 +88,71 @@ section.home-section.home-param
 						.number 5
 						.title Nhóm
 						.des Sản phẩm chủ lực
-section.home-section.home-product
-	.container
-		.row.no-gutters
-			.col-12.col-lg-6
-				.tab-content#myTabContent
-					.tab-pane.fade.show.active#home(role='tabpanel' aria-labelledby='home-tab')
-						.product
-							.img.text-center
-								img(src="img/dua2.png", alt="alt")
-							.des Sữa gừa VIETCOCO là sản phẩm thay thế nguồn sữa bò hằng ngày, vừa giàu năng lượng lại hỗ trợ giảm cân hiệu quả. Sản phẩm không chỉ giàu chất béo bão hòa mà còn chứa năng lượng axit béo chuỗi trung bình giúp tăng cường quá trình trao đổi chất
-							.text-center
-								a.viewmore(href="#!") Xem thêm
-					.tab-pane.fade#profile(role='tabpanel' aria-labelledby='profile-tab')
-						.product
-							.img.text-center
-								img(src="img/dua2.png", alt="alt")
-							.des Sữa gừa VIETCOCO là sản phẩm thay thế nguồn sữa bò hằng ngày, vừa giàu năng lượng lại hỗ trợ giảm cân hiệu quả. Sản phẩm không chỉ giàu chất béo bão hòa mà còn chứa năng lượng axit béo chuỗi trung bình giúp tăng cường quá trình trao đổi chất
-							.text-center
-								a.viewmore(href="#!") Xem thêm
-					.tab-pane.fade#contact(role='tabpanel' aria-labelledby='contact-tab')
-						.product
-							.img.text-center
-								img(src="img/dua2.png", alt="alt")
-							.des Sữa gừa VIETCOCO là sản phẩm thay thế nguồn sữa bò hằng ngày, vừa giàu năng lượng lại hỗ trợ giảm cân hiệu quả. Sản phẩm không chỉ giàu chất béo bão hòa mà còn chứa năng lượng axit béo chuỗi trung bình giúp tăng cường quá trình trao đổi chất
-							.text-center
-								a.viewmore(href="#!") Xem thêm
-					.tab-pane.fade#contact2(role='tabpanel' aria-labelledby='contact-tab2')
-						.product
-							.img.text-center
-								img(src="img/dua2.png", alt="alt")
-							.des Sữa gừa VIETCOCO là sản phẩm thay thế nguồn sữa bò hằng ngày, vừa giàu năng lượng lại hỗ trợ giảm cân hiệu quả. Sản phẩm không chỉ giàu chất béo bão hòa mà còn chứa năng lượng axit béo chuỗi trung bình giúp tăng cường quá trình trao đổi chất
-							.text-center
-								a.viewmore(href="#!") Xem thêm
-			.col-12.col-lg-6
-				.product-type
-					.home-title Sản phẩm
-					ul.nav.nav-tabs#myTab(role='tablist')
-						li.nav-item
-							a.nav-link.active#home-tab(data-toggle='tab' href='#home' role='tab' aria-controls='home' aria-selected='true') 
-								.product-item
-									.icon
-										img(src="img/sp1.png", alt="alt")
-									.name Thực phẩm
-						li.nav-item
-							a.nav-link#profile-tab(data-toggle='tab' href='#profile' role='tab' aria-controls='profile' aria-selected='false')
-								.product-item
-									.icon
-										img(src="img/sp2.png", alt="alt")
-									.name Nước giải khát
-						li.nav-item
-							a.nav-link#contact-tab(data-toggle='tab' href='#contact' role='tab' aria-controls='contact' aria-selected='false')
-								.product-item
-									.icon
-										img(src="img/sp3.png", alt="alt")
-									.name Mỹ phẩm
-						li.nav-item
-							a.nav-link#contact-tab2(data-toggle='tab' href='#contact2' role='tab' aria-controls='contact2' aria-selected='false')
-								.product-item
-									.icon
-										img(src="img/sp4.png", alt="alt")
-									.name Các sản phẩm khác
 section.home-section.home-contact
-	.row.align-items-center
-		.col-12.col-lg-6
-			.text-center
-				img(src="img/dua3.png", alt="alt")
-		.col-12.col-lg-6
-			.contact-buy
-				.home-title.text-center Liên hệ mua hàng
-				.des Truy cập website bán hàng online hoặc đến các hệ thống phân phối của Lương Quới để lựa chọn những sản phẩm tinh túy nhất.
-				.btn-wrap
-					a.btn-buy(href="#!") Mua hàng online
-					a.btn-buy(href="#!") Mua hàng trực tiếp
-
+	.bg
+		img(src="img/bg1.jpg", alt="alt")
+	.container
+		.home-stitle.text-center Liên hệ mua hàng
+		.home-title.text-center Truy cập website bán hàng online hoặc đến các hệ thống phân phối của Lương Quới để lựa chọn những sản phẩm tinh túy nhất.
+		.btn-wrap
+			a.btn-buy(href="#!") Mua hàng online
+			a.btn-buy(href="#!") Mua hàng trực tiếp
 section.home-section.home-active
-	.home-title.text-center Hoạt động tiêu biểu
-	.container-fluid
+	.container
+		.home-stitle Hoạt động
+		.home-title Hoạt động tiêu biểu
 		.row
-			.col-12.col-lg-3
-				.active
-					.img
-						img(src="img/active1.jpg", alt="alt")
-					.info
-						.name Hội chợ GulFood
-						.des Gulfood Dubai nổi tiếng là hội chợ lớn nhất thế giới về thực phẩm và đồ uống diễn ra thường niên, với sự tham gia của 120 gian hàng quốc gia, gồm hơn 5.000 doanh nghiệp trưng bày sản phẩm. Hội chợ dự kiến đón hơn 90.000 khách thương mại đến từ trên 170 quốc gia...
-						a.viewmore(href="#!") Xem thêm
-			.col-12.col-lg-3
-				.active
-					.img
-						img(src="img/active2.jpg", alt="alt")
-					.info
-						.name Hội chợ GulFood
-						.des Gulfood Dubai nổi tiếng là hội chợ lớn nhất thế giới về thực phẩm và đồ uống diễn ra thường niên, với sự tham gia của 120 gian hàng quốc gia, gồm hơn 5.000 doanh nghiệp trưng bày sản phẩm. Hội chợ dự kiến đón hơn 90.000 khách thương mại đến từ trên 170 quốc gia...
-						a.viewmore(href="#!") Xem thêm
-			.col-12.col-lg-3
-				.active
-					.img
-						img(src="img/active3.jpg", alt="alt")
-					.info
-						.name Hội chợ GulFood
-						.des Gulfood Dubai nổi tiếng là hội chợ lớn nhất thế giới về thực phẩm và đồ uống diễn ra thường niên, với sự tham gia của 120 gian hàng quốc gia, gồm hơn 5.000 doanh nghiệp trưng bày sản phẩm. Hội chợ dự kiến đón hơn 90.000 khách thương mại đến từ trên 170 quốc gia...
-						a.viewmore(href="#!") Xem thêm
-			.col-12.col-lg-3
-				.active
-					.img
-						img(src="img/active4.jpg", alt="alt")
-					.info
-						.name Hội chợ GulFood
-						.des Gulfood Dubai nổi tiếng là hội chợ lớn nhất thế giới về thực phẩm và đồ uống diễn ra thường niên, với sự tham gia của 120 gian hàng quốc gia, gồm hơn 5.000 doanh nghiệp trưng bày sản phẩm. Hội chợ dự kiến đón hơn 90.000 khách thương mại đến từ trên 170 quốc gia...
-						a.viewmore(href="#!") Xem thêm
+			.col-12.col-lg-8
+				.row
+					.col-12.col-lg-6
+						.active
+							.img
+								img(src="img/active1.jpg", alt="alt")
+							.info
+								time 30 tháng 4, 2019
+								.name Hội chợ GulFood Lorem ipsum dolor sit amet.
+								.des Gulfood Dubai nổi tiếng là hội chợ lớn nhất thế giới về thực phẩm và đồ uống diễn ra thường niên, với sự tham gia của 120 gian hàng quốc gia, gồm hơn 5.000 doanh nghiệp trưng bày sản phẩm. Hội chợ dự kiến đón hơn 90.000 khách thương mại đến từ trên 170 quốc gia...
+								a.viewmore(href="#!") Xem thêm
+					.col-12.col-lg-6
+						.active
+							.img
+								img(src="img/active2.jpg", alt="alt")
+							.info
+								time 30 tháng 4, 2019
+								.name Hội chợ GulFood Lorem ipsum dolor sit amet.
+								.des Gulfood Dubai nổi tiếng là hội chợ lớn nhất thế giới về thực phẩm và đồ uống diễn ra thường niên, với sự tham gia của 120 gian hàng quốc gia, gồm hơn 5.000 doanh nghiệp trưng bày sản phẩm. Hội chợ dự kiến đón hơn 90.000 khách thương mại đến từ trên 170 quốc gia...
+								a.viewmore(href="#!") Xem thêm
+			.col-12.col-lg-4
+				.active-sidebar
+					.active
+						.img
+							img(src="img/active3.jpg", alt="alt")
+						.info
+							time 30 tháng 4, 2019
+							.name Hội chợ GulFood Lorem ipsum dolor sit amet.
+							.des Gulfood Dubai nổi tiếng là hội chợ lớn nhất thế giới về thực phẩm và đồ uống diễn ra thường niên, với sự tham gia của 120 gian hàng quốc gia, gồm hơn 5.000 doanh nghiệp trưng bày sản phẩm. Hội chợ dự kiến đón hơn 90.000 khách thương mại đến từ trên 170 quốc gia...
+							a.viewmore(href="#!") Xem thêm
+					.active
+						.img
+							img(src="img/active4.jpg", alt="alt")
+						.info
+							time 30 tháng 4, 2019
+							.name Hội chợ GulFood Lorem ipsum dolor sit amet.
+							.des Gulfood Dubai nổi tiếng là hội chợ lớn nhất thế giới về thực phẩm và đồ uống diễn ra thường niên, với sự tham gia của 120 gian hàng quốc gia, gồm hơn 5.000 doanh nghiệp trưng bày sản phẩm. Hội chợ dự kiến đón hơn 90.000 khách thương mại đến từ trên 170 quốc gia...
+							a.viewmore(href="#!") Xem thêm
+					.active
+						.img
+							img(src="img/active4.jpg", alt="alt")
+						.info
+							time 30 tháng 4, 2019
+							.name Hội chợ GulFood Lorem ipsum dolor sit amet.
+							.des Gulfood Dubai nổi tiếng là hội chợ lớn nhất thế giới về thực phẩm và đồ uống diễn ra thường niên, với sự tham gia của 120 gian hàng quốc gia, gồm hơn 5.000 doanh nghiệp trưng bày sản phẩm. Hội chợ dự kiến đón hơn 90.000 khách thương mại đến từ trên 170 quốc gia...
+							a.viewmore(href="#!") Xem thêm
 
 section.home-section.home-news
-	.home-title.text-center Tin tức Sự kiện
 	.container-fluid
+		.home-stitle.text-center Tin tức sự kiện
+		.home-title.text-center Tin mới cập nhật
 		.row
 			.col-12.col-lg-3
 				.news-item
@@ -156,29 +160,41 @@ section.home-section.home-news
 						img(src="img/news1.jpg", alt="alt")
 					.info
 						.name CÔNG TY TNHH CHẾ BIẾN DỪA LƯƠNG QUỚI THAM GIA LỄ HỘI PHẬT ĐẢN 2019 – VESAK 2019
+						.des Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, provident.
+						a.readmore(href="#!") Xem thêm
 			.col-12.col-lg-3
 				.news-item
 					.img
 						img(src="img/news2.jpg", alt="alt")
 					.info
 						.name CÔNG TY TNHH CHẾ BIẾN DỪA LƯƠNG QUỚI NHIỀU NĂM LIỀN ĐẠT DANH HIỆU HÀNG VIỆT NAM CHẤT LƯỢNG CAO DO NGƯỜI TIÊU DÙNG BÌNH CHỌN
+						.des Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, provident.
+						a.readmore(href="#!") Xem thêm
 			.col-12.col-lg-3
 				.news-item
 					.img
 						img(src="img/news3.jpg", alt="alt")
 					.info
-						.name CÔNG TY TNHH CHẾ BIẾN DỪA LƯƠNG QUỚI THAM GIA HỘI CHỢ FOODEX JAPAN 201
+						.name CÔNG TY TNHH CHẾ BIẾN DỪA LƯƠNG QUỚI THAM GIA HỘI CHỢ FOODEX JAPAN 2019
+						.des Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, provident.
+						a.readmore(href="#!") Xem thêm
 			.col-12.col-lg-3
 				.news-item
 					.img
 						img(src="img/news4.jpg", alt="alt")
 					.info
 						.name VIETNAM EXPO 2019 - GẮN KẾT, CHIA SẺ CÙNG THÀNH CÔNG
-
+						.des Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, provident.
+						a.readmore(href="#!") Xem thêm
 
 section.home-section.home-recrui
-	.home-title.text-center Cơ hội nghề nghiệp
 	.container
-		.text-center
-			.recrui-intro Lương Quới luôn chào đón và tạo các điều kiện tốt, đảm bảo chế độ tốt cho các ứng viên có hoài bão, yêu thích được làm việc trong một môi trường năng động và đầy thử thách ở Lương Quới.
-			a.btn-apply(href="#!") Ứng tuyển
+		.recrui-content
+			.title-col
+				.home-stitle Tuyển dụng
+				.home-title Cơ hội nghề nghiệp
+			.content-col
+				.content Lương Quới luôn chào đón và tạo các điều kiện tốt, đảm bảo chế độ tốt cho các ứng viên có hoài bão, yêu thích được làm việc trong một môi trường năng động và đầy thử thách ở Lương Quới.
+			.button-col
+				a.apply(href="#!") Ứng tuyển
+			//- a.btn-apply(href="#!") Ứng tuyển

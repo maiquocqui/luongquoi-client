@@ -1,42 +1,65 @@
-.contact-detail
-	.logo
-		margin-bottom: 15px
-		img
-			width: 100px
-	.company
-		+fs(16rem)
-		font-weight: 500
-		text-transform: uppercase
-		margin-bottom: 20px
-	.contact-info
-		+fs(14rem)
-		li
-			+pos(rel,null)
-			padding-left: 25px
-			margin-bottom: 10px
-			.fa
-				+pos(abs,3px null null 0)
-				color: $color-default
-
 .contact-page
-	margin: 40px 0
-	background: $white
-	padding: 40px
-	.maps
-		margin: -20px -20px 40px
-	.contact-form
+.address-section
+	@extend .home-section
+	.address-item
+		padding: 30px
+		+bor-rad(5px)
+		height: 100%
+		border: 1px dashed darken($white,10%)
+		&:hover
+			background: lighten($color-default,50%)
+			.name
+				color: $color-default
+		.name
+			@extend .title
+			+fs(28rem)
+			min-height: 66px
+			margin-bottom: 20px
+		.des
+			opacity: 0.8
+			line-height: 2
+.contact-form
+	+pos(rel,null)
+	&:before
+		content: ''
+		display: block
+		+pos(abs, 0 null 0 0)
+		right: 50%
+		background: $color-primary
+	.form-wrap
+		padding: 120px 0
+		background: $color-primary
+		color: $white
+		padding-right: 120px
 		.module-title
+			@extend .home-title
+		.form-row
+			margin: 0px -10px
+			.col-12
+				padding: 0px 10px
+		.form-group
+			margin-bottom: 20px
+		input, textarea
+			padding: 20px 30px
+			+bor-rad(5px)
+			border: none
 			+fs(14rem)
-			// font-weight: 500
-			// text-align: center
-			margin-bottom: 10px
-		.form-wrap
-			max-width: 700px
-			margin: 0 auto
-	.btn-wrap
-		// text-align: center
+		textarea
+			min-height: 150px
 		input[type="submit"]
-			width: auto
-			background: $color-primary
+			background: $color-default
 			color: $white
-			+fs(14rem)
+			width: auto
+			text-transform: none
+			font-weight: 500
+			+fs(18rem)
+			padding: 15px 60px
+	.content-block
+		padding-left: 120px
+		.img-block
+			text-align: center
+			margin-bottom: 40px
+			img
+				width: 360px
+		.content
+			line-height: 2

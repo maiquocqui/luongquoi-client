@@ -1,81 +1,276 @@
 section.breadcrumb-wrap.clearfix
 	.breadcrumb-bg(style="background: url(img/br7.jpg) center center no-repeat;background-size:cover")
+	h3.page-name Sản phẩm
+//- nav.horizon-nav
 	.container
-		ol.breadcrumb
+		ul
+			li.active
+				a(href="#!") Thực phẩm
 			li
-				a(href="#")
-					span Trang chủ
+				a(href="#!") Nước giải khát
 			li
-				a(href="#")
-					span Sản phẩm
-		h3.page-name Sản phẩm
-section.product-page
+				a(href="#!") Mỹ phẩm
+			li
+				a(href="#!") Các sản phẩm khác
+section.product-categories
 	.container
+		.cate-list
+			.row
+				.col-12.col-md-3
+					a.cate.active(href="#!")
+						.img
+							img(src="img/hpr1.jpg", alt="alt")
+						.caption
+							.name Thực phẩm
+				.col-12.col-md-3
+					a.cate(href="#!")
+						.img
+							img(src="img/hpr2.jpg", alt="alt")
+						.caption
+							.name Nước giải khát
+				.col-12.col-md-3
+					a.cate(href="#!")
+						.img
+							img(src="img/hpr3.jpg", alt="alt")
+						.caption
+							.name Mỹ phẩm
+				.col-12.col-md-3
+					a.cate(href="#!")
+						.img
+							img(src="img/hpr4.jpg", alt="alt")
+						.caption
+							.name Các sản phẩm khác
+section.product-page-intro
+	//- .bg
+	//- 	img(src="img/about4.jpg", alt="alt")
+	.container
+		.home-title.text-center Thực phẩm
+		.img-block.text-center
+			img(src="img/dua3bak.png", alt="alt")
 		.product-list
 			.row
-				.col-12.col-md-6.col-lg-4
+				.col-12.col-md-6.col-lg-3
 					a.product(href="#!")
 						.img
 							img(src="img/pr1.jpg", alt="alt")
 						.caption
 							.name Cơm dừa nạo sấy
-				.col-12.col-md-6.col-lg-4
+				.col-12.col-md-6.col-lg-3
 					a.product(href="#!")
 						.img
-							img(src="img/pr1.jpg", alt="alt")
+							img(src="img/pr2.jpg", alt="alt")
 						.caption
 							.name Dừa sấy giòn
-				.col-12.col-md-6.col-lg-4
+				.col-12.col-md-6.col-lg-3
 					a.product(href="#!")
 						.img
-							img(src="img/pr1.jpg", alt="alt")
+							img(src="img/pr3.jpg", alt="alt")
 						.caption
 							.name Nước cốt dừa
-				.col-12.col-md-6.col-lg-4
+				.col-12.col-md-6.col-lg-3
 					a.product(href="#!")
 						.img
-							img(src="img/pr1.jpg", alt="alt")
+							img(src="img/pr4.jpg", alt="alt")
 						.caption
 							.name Sữa dừa uống
-				.col-12.col-md-6.col-lg-4
+//- section.product-page
+	.container
+		.row
+			.col-12.col-lg-7
+				.product-list
+					.row
+						.col-12.col-md-6
+							a.product.active(href="#!")
+								.img
+									img(src="img/opr1.jpg", alt="alt")
+								.caption
+									.name Cơm dừa nạo sấy
+						.col-12.col-md-6
+							a.product(href="#!")
+								.img
+									img(src="img/opr2.jpg", alt="alt")
+								.caption
+									.name Dừa sấy giòn
+						.col-12.col-md-6
+							a.product(href="#!")
+								.img
+									img(src="img/opr3.jpg", alt="alt")
+								.caption
+									.name Nước cốt dừa
+						.col-12.col-md-6
+							a.product(href="#!")
+								.img
+									img(src="img/opr4.png", alt="alt")
+								.caption
+									.name Sữa dừa uống
+			.col-12.col-lg-5
+				.pr-short-intro
+					.img
+						img(src="img/pritem1.png", alt="alt")
+					.caption
+						.name Dừa sấy giòn
+						.en-name TOASTED COCONUT CHIPS
+						.des mang những quả dừa ngon hảo hạng của vùng đất Bến Tre - mệnh danh là thủ phủ dừa của Việt Nam đến những túi sản phẩm trên tay bạn.
+						a.link(href="#!") Xem chi tiết
+//- section.product-page.s2
+	.container
+		.row
+			.col-12.col-lg-6
+				.pr-short-intro
+					.img
+						img(src="img/pritem1.png", alt="alt")
+					.caption
+						.name Dừa sấy giòn
+						.en-name TOASTED COCONUT CHIPS
+						.des mang những quả dừa ngon hảo hạng của vùng đất Bến Tre - mệnh danh là thủ phủ dừa của Việt Nam đến những túi sản phẩm trên tay bạn.
+						a.link(href="#!") Xem chi tiết
+			.col-12.col-lg-6
+				.product-list
+					.row
+						.col-12.col-md-6
+							a.product.active(href="#!")
+								.img
+									img(src="img/pritem1.png", alt="alt")
+								.caption
+									.name Cơm dừa nạo sấy
+						.col-12.col-md-6
+							a.product(href="#!")
+								.img
+									img(src="img/pritem1.png", alt="alt")
+								.caption
+									.name Dừa sấy giòn
+						.col-12.col-md-6
+							a.product(href="#!")
+								.img
+									img(src="img/pritem1.png", alt="alt")
+								.caption
+									.name Nước cốt dừa
+						.col-12.col-md-6
+							a.product(href="#!")
+								.img
+									img(src="img/pritem1.png", alt="alt")
+								.caption
+									.name Sữa dừa uống
+//- section.product-page
+	.container
+		.row
+			.col-12.col-lg-6
+				.product-list
+					.row
+						.col-12.col-md-6
+							a.product.active(href="#!")
+								.img
+									img(src="img/pritem1.png", alt="alt")
+								.caption
+									.name Cơm dừa nạo sấy
+						.col-12.col-md-6
+							a.product(href="#!")
+								.img
+									img(src="img/pritem1.png", alt="alt")
+								.caption
+									.name Dừa sấy giòn
+						.col-12.col-md-6
+							a.product(href="#!")
+								.img
+									img(src="img/pritem1.png", alt="alt")
+								.caption
+									.name Nước cốt dừa
+						.col-12.col-md-6
+							a.product(href="#!")
+								.img
+									img(src="img/pritem1.png", alt="alt")
+								.caption
+									.name Sữa dừa uống
+			.col-12.col-lg-6
+				.pr-short-intro
+					.img
+						img(src="img/pritem1.png", alt="alt")
+					.caption
+						.name Dừa sấy giòn
+						.en-name TOASTED COCONUT CHIPS
+						.des mang những quả dừa ngon hảo hạng của vùng đất Bến Tre - mệnh danh là thủ phủ dừa của Việt Nam đến những túi sản phẩm trên tay bạn.
+						a.link(href="#!") Xem chi tiết
+
+
+//- section.product-page
+	//- .bg(style="background: url(img/about2.jpg) center center / cover no-repeat")
+	.container
+		.row.no-gutters
+			.col-12.col-md-8.col-lg-6
+				.product-list
+					.row
+						.col-12.col-md-6
+							a.product(href="#!")
+								.img
+									img(src="img/pr1.jpg", alt="alt")
+								.caption
+									.name Cơm dừa nạo sấy
+						.col-12.col-md-6
+							a.product(href="#!")
+								.img
+									img(src="img/pr2.jpg", alt="alt")
+								.caption
+									.name Dừa sấy giòn
+						.col-12.col-md-6
+							a.product(href="#!")
+								.img
+									img(src="img/pr3.jpg", alt="alt")
+								.caption
+									.name Nước cốt dừa
+						.col-12.col-md-6
+							a.product(href="#!")
+								.img
+									img(src="img/pr4.jpg", alt="alt")
+								.caption
+									.name Sữa dừa uống
+			.col-12.col-md-4.col-lg-6
+//- section.product-section.s2
+	.container
+		.product-list
+			.row
+				.col-12.col-md-6
 					.product
 						.img
-							img(src="img/pr1.jpg", alt="alt")
+							img(src="img/pr5.jpg", alt="alt")
 						.caption
 							.name Nước dừa
-				.col-12.col-md-6.col-lg-4
+				.col-12.col-md-6
 					a.product(href="#!")
 						.img
-							img(src="img/pr1.jpg", alt="alt")
+							img(src="img/pr6.jpg", alt="alt")
 						.caption
 							.name Bơ dừa
-				.col-12.col-md-6.col-lg-4
+				.col-12.col-md-6
 					a.product(href="#!")
 						.img
-							img(src="img/pr1.jpg", alt="alt")
+							img(src="img/pr7.jpg", alt="alt")
 						.caption
 							.name Dầu dừa nguyên chất
-				.col-12.col-md-6.col-lg-4
+				.col-12.col-md-6
 					a.product(href="#!")
 						.img
-							img(src="img/pr1.jpg", alt="alt")
+							img(src="img/pr8.jpg", alt="alt")
 						.caption
 							.name Dầu dừa tinh khiết
-				.col-12.col-md-6.col-lg-4
+//- section.product-section
+	.container
+		.product-list
+			.row
+				.col-12.col-md-6
 					a.product(href="#!")
 						.img
-							img(src="img/pr1.jpg", alt="alt")
+							img(src="img/pr9.jpg", alt="alt")
 						.caption
 							.name Dầu dừa tinh luyện
-				.col-12.col-md-6.col-lg-4
+				.col-12.col-md-6
 					a.product(href="#!")
 						.img
-							img(src="img/pr1.jpg", alt="alt")
+							img(src="img/pr10.jpg", alt="alt")
 						.caption
 							.name Cám dừa
-				.col-12.col-md-6.col-lg-4
+				.col-12.col-md-6
 					a.product(href="#!")
 						.img
-							img(src="img/pr1.jpg", alt="alt")
+							img(src="img/pr11.jpg", alt="alt")
 						.caption
 							.name Dầu dừa thô

@@ -1,14 +1,6 @@
-section.breadcrumb-wrap.clearfix
-	.breadcrumb-bg(style="background: url(img/br6.jpg) center center no-repeat;background-size:cover")
-	.container
-		ol.breadcrumb
-			li
-				a(href="#")
-					span Trang chủ
-			li
-				a(href="#")
-					span Giới thiệu
-		h3.page-name
+section.breadcrumb-wrap
+	.breadcrumb-bg(style="background: url(img/banner.jpg) center center no-repeat;background-size:cover")
+	.page-name Giới thiệu
 nav.horizon-nav
 	.container
 		ul
@@ -24,41 +16,59 @@ nav.horizon-nav
 				a(href="#!") Thành tích nổi bật
 section.vct-section
 	.container
-		.title
+		//- .title
 			h4 KHẲNG ĐỊNH
 			h3 VỊ TRÍ TIÊN PHONG
 			h5 Ngành chế biến dừa Việt Nam
-		.row.align-items-center
-			.col-12.col-md-8.col-lg-9
-				.intro-img
-					img(src="img/vnl.jpg", alt="alt")
-			.col-12.col-md-4.col-lg-3
-				.shadow-block.story
-					.icon
-						img(src="img/ic-story.png", alt="alt")
+		.row
+			.col-12.col-md-6
+				.img-block
+					.img1
+						img(src="img/about1.jpg", alt="alt")
+						.icon
+							img(src="img/dua2.png", alt="alt")
+					.img2
+						img(src="img/about2.jpg", alt="alt")
+			.col-12.col-md-6
+				.content-block
+					.home-stitle Giới thiệu
+					.home-title Câu chuyện về Lương Quới
 					.content
 						p Công ty TNHH Chế Biến Dừa Lương Quới được thành lập năm 1997 và bắt đầu hành trình gia tăng giá trị cho trái dừa bằng những sản phẩm chất lượng cao. Trải qua hơn 20 năm không ngừng đổi mới và sáng tạo, công ty TNHH Chế Biến Dừa Lương Quới đang từng bước khẳng định vị thế dẫn đầu trong ngành chế biến dừa, mang cây dừa Việt vươn ra thế giới với những sản phẩm mang thương hiệu Vietcoco.
-		.row.ml-lg-3
-			.col-12.col-md-5
-				.shadow-block.vision
-					.icon2
-						img(src="img/tn.png", alt="alt")
-					.block-title Tầm nhìn
-					.content “Công ty TNHH Chế Biến Dừa Lương Quới nỗ lực trở thành một trong những doanh nghiệp sản xuất, cung cấp các sản phẩm từ dừa với chất lượng cao hàng đầu khu vực Châu Á Thái Bình Dương”
-			.col-12.col-md-7
-				.shadow-block.mission
-					.icon2
-						img(src="img/sm.png", alt="alt")
-					div
-						.block-title Sứ mệnh
-						.content Chúng tôi cam kết mang đến cho cộng đồng những sản phẩm chất lượng cao bằng sự chân thành và trách nhiệm với xã hội.
-section.gtcl-section
+				.strong-block
+					.strong-title.text-center Khẳng định vị trí tiên phong ngành
+						br
+						|chế biến dừa Việt Nam
+section.tnsm-section
+	.bg
+		img(src="img/smbg.jpg", alt="alt")
 	.container
-		.title Giá trị cốt lõi
 		.row
 			.col-12.col-md-5
+				.img-block
+					img(src="img/smbg.jpg", alt="alt")
 			.col-12.col-md-7
-				.block
+				.row
+					.col-12.col-md-6
+						.tn-block
+							//- .bg
+								img(src="img/tnbg.jpg", alt="alt")
+							.home-title Tầm nhìn
+							.content
+								p Công ty TNHH Chế Biến Dừa Lương Quới nỗ lực trở thành một trong những doanh nghiệp sản xuất, cung cấp các sản phẩm từ dừa với chất lượng cao hàng đầu khu vực Châu Á Thái Bình Dương
+					.col-12.col-md-6
+						.sm-block
+							//- .bg
+								img(src="img/smbg.jpg", alt="alt")
+							.home-title Sứ mệnh
+							.content
+								p Chúng tôi cam kết mang đến cho cộng đồng những sản phẩm chất lượng cao bằng sự chân thành và trách nhiệm với xã hội.
+section.gtcl-section
+	.container
+		.row.no-gutters
+			.col-12.col-md-6
+				.content-block
+					.home-title Giá trị cốt lõi
 					.content
 						.gt-col
 							.icon
@@ -90,3 +100,6 @@ section.gtcl-section
 							.caption
 								.name Cộng đồng
 								.des Thể hiện trách nhiệm xã hội doanh nghiệp
+			.col-12.col-md-6
+				.img-block
+					img(src="img/gtcl.jpg", alt="alt")

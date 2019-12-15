@@ -1,14 +1,36 @@
-header.header1
-	.container
-		.header-wrap
-			.btn-showmenu <span class="lnr lnr-menu"></span>
-			.overlay
-			.logo
-				a(href="#!")
-					img(src="img/logo.png", alt="alt")
+header
+	.header-top
+		.container
+			.header-top-wrap
+				.header-left
+					.email
+						<span class="lnr lnr-envelope"></span>
+						<a>support@luongquoi.vn</a>
+					.phone
+						<span class="lnr lnr-phone-handset"></span>
+						<a>(+84).28.3762.8850</a>
+				.logo
+					a(href="#!")
+						img(src="img/logo.png", alt="alt")
+				.header-right
+					.search.dropdown
+						.search-toggle( data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+							<span class="lnr lnr-magnifier"></span>
+						.dropdown-menu.dropdown-menu-right(aria-labelledby="dropdownMenuButton")
+							.searchbox
+								input(type="text", placeholder="Nhập từ khóa tìm kiếm")
+								.searchbutton <i class="fa fa-search" aria-hidden="true"></i>
+					.language.dropdown
+						.language-toggle(data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+							<span class="lnr lnr-earth"></span>
+						.dropdown-menu.dropdown-menu-right(aria-labelledby="dropdownMenuButton")
+							a.dropdown-item.active(href='#') Vietnamese
+							a.dropdown-item(href='#') English
+	.header-menu
+		.container
 			.menu
 				ul.menu-link
-					li
+					li.active
 						a(href="#!") Trang chủ
 					li
 						a(href="#!") Giới thiệu
@@ -72,18 +94,3 @@ header.header1
 									a(href="#!") Video
 					li
 						a(href="#!") Liên hệ
-			.header-right
-				.search.dropdown
-					.search-toggle( data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
-						<span class="lnr lnr-magnifier"></span>
-					.dropdown-menu.dropdown-menu-right(aria-labelledby="dropdownMenuButton")
-						.searchbox
-							input(type="text", placeholder="Nhập từ khóa tìm kiếm")
-							.searchbutton <i class="fa fa-search" aria-hidden="true"></i>
-				.language.dropdown
-					.language-toggle(data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
-						<span class="lnr lnr-earth"></span>
-					.dropdown-menu.dropdown-menu-right(aria-labelledby="dropdownMenuButton")
-						a.dropdown-item.active(href='#') Vietnamese
-						a.dropdown-item(href='#') English
-						
