@@ -345,6 +345,29 @@
 					color: $color-default
 					opacity: 1
 
+.sidebar-categories2
+	margin: 40px 0
+	+bor-rad(5px)
+	overflow: hidden
+	.categories
+		li
+			background: lighten($color-default,50%)
+			+ li
+				margin-top: 1px
+			a
+				display: block
+				+fs(15rem)
+				font-weight: 500
+				color: darken($white,65%)
+				padding: 15px 40px
+			&:hover
+				a
+					color: $color-primary
+			&.active
+				background: $white
+				a
+					color: $color-primary
+
 .sidebar-news
 	margin-bottom: 40px
 .news-list3

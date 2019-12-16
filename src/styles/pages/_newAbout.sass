@@ -12,7 +12,7 @@
 			a
 				display: block
 				+bor-rad(5px 5px 0 0)
-				+fs(13rem)
+				+fs(12rem)
 				letter-spacing: 1px
 				text-transform: uppercase
 				padding: 15px 30px
@@ -24,7 +24,6 @@
 					color: $color-default
 			&.active
 				a
-					font-weight: 700
 					color: $color-primary
 					background: $white
 
@@ -66,7 +65,7 @@
 					max-height: 50%
 					opacity: 0.8
 		.img2
-			margin-top: -160px
+			margin-top: -180px
 			margin-left: 160px
 			+bor-rad(5px)
 			overflow: hidden
@@ -77,13 +76,13 @@
 	.strong-block
 		// background: $color-primary
 		background: darken($white,5%)
-		padding: 60px
+		padding: 30px
 		+bor-rad(5px)
 		.strong-title
 			@extend .home-title
 			// color: $white
-			margin-bottom: 0
 			+fs(36rem)
+			margin-bottom: 0
 	.content
 		line-height: 2rem
 		text-align: justify
@@ -137,15 +136,15 @@
 		+pos(abs, 0 50% 0 0)
 		background: lighten($color-default,50%)
 	.content-block
-		padding: 120px 0 0
+		padding: 60px 0 0
 		padding-right: 120px
 		background: lighten($color-default,50%)
 	.gt-col
 		+flexbox
-		margin-bottom: 30px
+		margin-bottom: 20px
 		.icon
-			width: 50px
-			height: 50px
+			width: 64px
+			height: 64px
 			+flexbox
 			align-items: center
 			align-content: center
@@ -158,14 +157,16 @@
 				filter: invert(100%)
 				margin: 0
 		.caption
-			width: calc(100% - 50px)
-			padding-left: 15px
+			width: calc(100% - 64px)
+			padding-left: 20px
+			padding-top: 5px
 			+fs(16rem)
 			.name
 				font-weight: 700
 			.des
 	.img-block
-		margin-top: 120px
+		margin-top: 60px
+		margin-right: 80px
 		+pos(rel,null)
 		&:before
 			content: ''
@@ -187,20 +188,22 @@
 			background: $white
 
 .history-page
-	padding: 120px 0
+	@extend .home-section
 	text-align: center
 	.history-picture
 		.item
 			vertical-align: top
 		img
 			width: 100%
-			height: 600px
+			height: 400px
 			object-fit: cover
+			+bor-rad(5px)
+			overflow: hidden
 	.history-year
-		width: 250px
+		width: 150px
 		+bor-rad(5px 5px 0 0)
 		background: $color-default
-		margin: -108px auto 0
+		margin: -66px auto 0
 		text-align: center
 		.slick-prev, .slick-next
 			+pos(abs, 50% null null null)
@@ -210,7 +213,7 @@
 			color: $white
 			&:before
 				content: ''
-				+fs(32rem)
+				+fs(24rem)
 		.slick-prev
 			left: -40px
 			&:before
@@ -220,17 +223,17 @@
 			&:before
 				content: '\f061'
 		.year
-			+fs(68rem)
+			+fs(36rem)
 			line-height: 1
 			color: $white
-			padding: 20px 0
+			padding: 15px 0
 			font-weight: 700
 	.history-event
 		text-align: center
-		padding: 40px 0
+		padding: 20px 0
 		.item
 			.content
-				+fs(28rem)
+				+fs(18rem)
 				max-width: 700px
 				margin: 0 auto
 				p
@@ -243,12 +246,12 @@
 			cursor: pointer
 			.year
 				@extend .title
-				+fs(36rem)
+				+fs(28rem)
 				&:after
 					content: ''
 					display: block
 					width: 100%
-					height: 18px
+					height: 10px
 					margin: 10px auto 0
 					background: url(../img/branch.png) center left no-repeat
 					background-size: auto 100%
@@ -269,8 +272,11 @@
 	.content
 		line-height: 2
 	.staff-list
+		max-width: 900px
+		margin: 30px auto 0
 		.staff-item
-			margin-bottom: 30px
+			width: 90%
+			margin: 0 auto 30px
 			cursor: pointer
 			.img
 				+bor-rad(5px)
@@ -281,12 +287,13 @@
 				margin: -20px 20px 0
 				+pos(rel,null)
 				z-index: 3
-				padding: 30px
+				padding: 15px
 				text-align: center
 				+transition(all,0.5s)
 				.name
-					+fs(20rem)
+					+fs(16rem)
 				.vt
+					+fs(14rem)
 					opacity: 0.8
 			&:hover
 				.caption
@@ -297,11 +304,12 @@
 	.content
 		line-height: 2
 	.office
+		margin-top: 30px
 		.img
 			+pos(rel,null)
 			+bor-rad(5px)
 			overflow: hidden
-			margin-bottom: 30px
+			margin-bottom: 20px
 			&:before
 				content: ''
 				display: block
@@ -321,18 +329,20 @@
 		.caption
 			.location, .phone, .email
 				+pos(rel,null)
-				line-height: 2
+				line-height: 1.5
 				padding-left: 30px
 				margin-bottom: 10px
 				.fa
 					+fs(18rem)
-					+pos(abs, 8px null null 0)
+					+pos(abs, 5px null null 0)
 					color: $color-default
 
 .ttnb-section
 	@extend .home-section
 	.content
 		line-height: 2
+	.achievement-list
+		margin-top: 30px
 	.achievement
 		.img
 			+bor-rad(5px)
@@ -384,23 +394,21 @@
 	@extend .home-section
 	padding-bottom: 0
 	background: lighten($color-default,50%)
-	margin-bottom: 160px
 	.img-block
 		img
-			+bor-rad(5px)
+			// +bor-rad(5px)
 			overflow: hidden
 	.content-block
 		background: $white
-		padding: 60px
-		margin-top: 120px
-		margin-left: -120px
-		margin-bottom: -120px
+		padding: 40px
+		margin-top: 60px
+		margin-left: -80px
 		+bor-rad(5px)
 		box-shadow: 0px 10px 20px color-rgba($black,0.1)
 	.content
 		line-height: 2
 .htcl-section
-	padding-top: 120px
+	padding-top: 60px
 	.content-block
 		padding-right: 60px
 	.content
@@ -410,11 +418,10 @@
 		z-index: 3
 		+bor-rad(5px)
 		overflow: hidden
-		margin-bottom: -120px
+		margin-bottom: -250px
 .htcl2-section
 	@extend .home-section
 	background: $color-default
-	padding-top: 240px
 	+pos(rel,null)
 	.bg
 		+pos(abs, 0 null 0 0)
@@ -436,7 +443,7 @@
 		background: $white
 		+bor-rad(5px)
 		overflow: hidden
-		margin-bottom: -120px !important
+		margin-bottom: -60px !important
 		+pos(rel,null)
 		z-index: 3
 	img
@@ -461,7 +468,7 @@
 					margin-bottom: 0
 .htcl4-section
 	@extend .home-section
-	padding-top: 240px
+	padding-top: 100px
 	background: lighten($color-default,50%)
 	.cert-slide2
 		margin: 0px -15px

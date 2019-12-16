@@ -211,7 +211,7 @@
 				background: color-rgba($color-default,0.7)
 
 .product-page-intro
-	// background: $color-default
+	@extend .home-section
 	+pos(rel,null)
 	.bg
 		+pos(abs, 0 null 0 0)
@@ -222,18 +222,18 @@
 			height: 100%
 			object-fit: cover
 	.img-block
-		margin-bottom: 60px
+		margin-bottom: 30px
 		img
-			max-height: 500px
+			max-height: 300px
 
 
 .product-list
-	margin-bottom: 120px
 	.product
 		+flexbox
 		align-items: center
 		align-content: center
 		justify-content: center
+		margin-bottom: 40px
 		.img
 			width: 100px
 			height: 100px

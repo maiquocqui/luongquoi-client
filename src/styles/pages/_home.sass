@@ -10,9 +10,10 @@
 		z-index: 5
 		+transform(translateY(-50%))
 		color: $white
+		text-shadow: 0px 5px 20px color-rgba($black,0.2)
 		h4
 			@extend .title
-			+fs(32rem)
+			+fs(24rem)
 			text-transform: uppercase
 			font-weight: 700
 			letter-spacing: 5px
@@ -27,7 +28,7 @@
 				margin-top: 10px
 		h3
 			@extend .title
-			+fs(100rem)
+			+fs(60rem)
 			font-weight: 700
 			line-height: 1.1
 			margin-bottom: 30px
@@ -45,13 +46,13 @@
 
 .home-title
 	@extend .title
-	+fs(64rem)
-	margin-bottom: 50px
+	+fs(48rem)
+	margin-bottom: 30px
 	&:after
 		content: ''
 		display: block
 		width: 100%
-		height: 18px
+		height: 15px
 		margin-top: 10px
 		background: url(../img/branch.png) center left no-repeat
 		background-size: auto 100%
@@ -64,7 +65,7 @@
 	margin-bottom: 10px
 
 .home-section
-	padding: 120px 0
+	padding: 60px 0
 
 .home-intro
 	padding-bottom: 0
@@ -114,7 +115,7 @@
 		background: $color-primary
 		+bor-rad(5px)
 		// margin-top: 60px
-		padding: 60px
+		padding: 40px
 		+flexbox
 		align-items: center
 		align-content: center
@@ -138,26 +139,24 @@
 			line-height: 1.8
 			p
 				margin: 0
-				font-weight: 500
 
 
 .home-product
 	+pos(rel,null)
-	margin-top: -120px
-	padding-top: 240px
+	padding-top: 60px
 	border-bottom: 1px solid darken($white,10%)
 	&:before
 		content: ''
 		display: block
-		+pos(abs, 0 0 null 0)
-		height: 510px
+		+pos(abs, -100px 0 null 0)
+		height: 430px
 		background: lighten($color-default,50%)
 	.home-product-list
 		.product
 			.img
 				+bor-rad(5px)
 				overflow: hidden
-				margin-bottom: 40px
+				margin-bottom: 25px
 				img
 					width: 100%
 			.caption
@@ -165,13 +164,14 @@
 				.name
 					@extend .title
 					+fs(36rem)
-					margin-bottom: 25px
+					margin-bottom: 10px
 				.des
 					padding: 0px 20px
 					color: darken($white,60%)
-					margin-bottom: 30px
+					margin-bottom: 25px
 				.readmore
 					font-weight: 500
+					color: darken($white,50%)
 					&:before
 						content: '\f138'
 						margin-right: 5px
@@ -203,13 +203,13 @@
 			line-height: 1.1
 			font-family: 'Amatic SC', cursive
 			font-weight: 700
-			margin-bottom: 30px
+			margin-bottom: 15px
 		.title
 			+fs(36rem)
 			color: $color-primary
 			text-transform: uppercase
 			+pos(rel,null)
-			margin-bottom: 20px
+			margin-bottom: 0px
 		.des
 			// +fs(14rem)
 			color: darken($white,50%)
@@ -230,14 +230,13 @@
 			height: 100%
 			object-fit: cover
 	.home-title
-		+fs(52rem)
+		// +fs(52rem)
 	.home-stitle
 		color: lighten($color-default,20%)
 		// opacity: 0.8
 	.btn-wrap
 		display: flex
 		justify-content: center
-		margin-top: -20px
 		.btn-buy
 			background: color-rgba($white,0.2)
 			display: block
@@ -262,44 +261,45 @@
 		.img
 			+bor-rad(5px)
 			overflow: hidden
-			margin-bottom: 30px
+			margin-bottom: 20px
 			img
 				width: 100%
-				height: 300px
+				height: 250px
 				object-fit: cover
 		.info
 			time
 				display: block
+				+fs(14rem)
 				+pos(abs,0 null null 50%)
 				+transform(translateX(-50%))
 				background: $color-default
 				color: $white
-				padding: 8px 20px
-				+bor-rad(0px 0px 10px 10px)
+				padding: 8px 15px
+				+bor-rad(0px 0px 5px 5px)
 			.name
-				+fs(24rem)
+				+fs(20rem)
 				line-height: 1.3
-				font-weight: 600
-				margin-bottom: 25px
+				font-weight: 500
+				margin-bottom: 15px
 				+textover(2)
 			.des
-				+fs(16rem)
+				+fs(15rem)
 				line-height: 1.8
 				color: darken($white,60%)
 				+textover(3)
-				margin-bottom: 30px
+				margin-bottom: 20px
 			.viewmore
-				font-weight: 600
+				// font-weight: 500
 				&:before
 					content: '\f138'
 					margin-right: 5px
 					color: $color-default
 	.active-sidebar
 		background: lighten($color-default,50%)
-		padding: 0px 60px
+		padding: 0px 30px
 		+bor-rad(5px)
 		.active
-			padding: 50px 0
+			padding: 25px 0
 			+ .active
 				border-top: 1px solid darken($white,10%)
 			.img
@@ -315,17 +315,18 @@
 					margin-bottom: 5px
 				.name
 					margin-bottom: 0
+					+fs(18rem)
 				.des, .viewmore
 					display: none
 .home-news
 	.container-fluid
-		max-width: 100%
-		width: 100%
-		padding: 0px
-		.row
-			margin: 0px -1px
-			.col-12
-				padding: 0px 1px
+		// max-width: 100%
+		// width: 100%
+		// padding: 0px
+	.row
+		margin: 0px -1px
+		.col-12
+			padding: 0px 1px
 	.news-item
 		+pos(rel,null)
 		+bor-rad(5px)
@@ -344,39 +345,41 @@
 				+bor-rad(5px)
 				overflow: hidden
 				width: 100%
-				height: calc(100vw / 3)
+				height: calc(100vw / 3.5)
 				object-fit: cover
 				+transition(all,0.3s)
 		.info
 			+pos(abs, null 0 0 0)
 			z-index: 5
-			padding: 60px
+			padding: 30px
 			color: $white
-			+transform(translateY(45%))
+			+transform(translateY(50%))
 			+transition(all,0.3s)
 			.name
 				@extend .title
-				+fs(36rem)
-				line-height: 1.2
+				+fs(28rem)
 				+textover(2)
 				text-transform: uppercase
-				margin-bottom: 20px
+				margin-bottom: 15px
 			.des
+				display: block
+				+fs(14rem)
 				line-height: 1.8
 				+textover(2)
-				margin-bottom: 30px
+				margin-bottom: 20px
 				opacity: 0
-				visibility: hidden
+				// visibility: hidden
 				+transition(all,0.3s)
 			.readmore
 				display: inline-block
-				padding: 15px 35px
+				+fs(13rem)
+				padding: 10px 30px
 				font-weight: 500
 				color: $white
 				background: $color-default
 				+bor-rad(5px)
 				opacity: 0
-				visibility: hidden
+				// visibility: hidden
 				+transition(all,0.3s)
 				&:hover
 					background: $color-primary
@@ -388,7 +391,7 @@
 				+transform(translateY(0))
 				.des, .readmore
 					opacity: 1
-					visibility: visible
+					// visibility: visible
 
 .home-recrui
 	padding-top: 0
